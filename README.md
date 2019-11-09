@@ -23,7 +23,7 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 | Names                     | Github Username   	| 
 | -------------             | :-------------:       | 
 | Louis-Benjamin Durocher   | LouisBenjamin			|
-|          					|   		 			|
+| Mina Selim       			| MinaSelim				|
 |  							|    					|
 | 							|						|
 |      						|        				|
