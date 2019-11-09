@@ -1,6 +1,42 @@
 # SOEN343
-## SOEN 343 2019 Project Gourp
+
+## Team Somena - Garage Band
+
 This is where something great will be created..
 
+## Objective
 
-## Teammates:
+Develop a ERP (Enterprise Ressource Planning) software called Garage Band to help garages across the world with ressource management
+
+## Core Features
+
+* Track labour and payroll
+* Managing repair jobs where tasks are numbered and verified
+* Managing inventory and external orders
+
+## Potential Features
+
+* Customer access to their repair status
+
+## Team Members
+
+| Names                     | Github Username   	| 
+| -------------             | :-------------:       | 
+| Louis-Benjamin Durocher   | LouisBenjamin			|
+|          					|   		 			|
+|  							|    					|
+| 							|						|
+|      						|        				|
+|          				    |        	 			|
+|          				   	|  						|
+|            				|        				|
+|            				|     					|
+|            				|    					|
+|                           |                       |                 
+
+
+## Technologies/Tools
+
+* Java
+* SpringBoot
+* Cloud Database?
