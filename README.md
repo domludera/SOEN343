@@ -6,7 +6,7 @@ This is where something great will be created..
 
 ## Objective
 
-Develop a ERP (Enterprise Ressource Planning) software called Garage Band to help garages across the world with ressource management
+Develop a ERP (Enterprise Resource Planning) software called Garage Band to help garages across the world with ressource management
 
 ## Core Features
 
