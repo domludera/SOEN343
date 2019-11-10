@@ -27,7 +27,7 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 | Patricia Nunes| Patnunes	|
 | Mike Calixte 							|mcalixte						|
 | Ragith Sabapathipillai    | r_saba       			|
-|          				    |        	 			|
+| Fintan Davidson         	| finndavidson      |
 |          				   	|  						|
 |            				|        				|
 |            				|     					|
