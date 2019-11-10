@@ -24,7 +24,7 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 | -------------             | :-------------:       | 
 | Louis-Benjamin Durocher   | LouisBenjamin			|
 | Mina Selim       			| MinaSelim				|
-| Patricia Nunes|    Patnunes					|
+| Patricia Nunes| Patnunes	|
 | 							|						|
 |      						|        				|
 |          				    |        	 			|
