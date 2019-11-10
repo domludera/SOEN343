@@ -26,7 +26,7 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 | Mina Selim       			| MinaSelim				|
 | Patricia Nunes| Patnunes	|
 | Mike Calixte 							|mcalixte						|
-|      						|        				|
+| Ragith Sabapathipillai    | r_saba       			|
 |          				    |        	 			|
 |          				   	|  						|
 |            				|        				|
