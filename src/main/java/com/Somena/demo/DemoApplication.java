@@ -1,4 +1,4 @@
-package com.Somena.demo;
+package com.somena.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
