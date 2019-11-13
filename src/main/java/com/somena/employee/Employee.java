@@ -1,28 +1,16 @@
 package com.somena.employee;
 
+import com.somena.person.Person;
+
 import java.util.Date;
 
-public class Employee {
+public class Employee extends Person {
 
-    private long id;
     private Date startDate;
-    private String firstName;
-    private String lastName;
 
-
-    public Employee(String firstName, String lastName, long id, Date startDate){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.id = id;
+    public Employee(String firstName, String lastName, long id, Date startDate) {
+        super(firstName, lastName, id);
         this.startDate = startDate;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public Date getStartDate() {
@@ -33,19 +21,4 @@ public class Employee {
         this.startDate = startDate;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }
