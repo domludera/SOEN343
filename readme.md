@@ -40,7 +40,7 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 | Mike Calixte 							|mcalixte						|
 | Ragith Sabapathipillai    | r_saba       			|
 | Dominik Ludera 				    | domludera  	 			|
-|          				   	|  						|
+| Fintan Davidson         	| finndavidson  		|
 |            				|        				|
 |            				|     					|
 |            				|    					|
