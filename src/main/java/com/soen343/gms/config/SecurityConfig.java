@@ -37,6 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception{
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
+                .antMatchers("/h2-console/**").permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/signup").permitAll()
                 .antMatchers("/home/**").hasAuthority("A").anyRequest().authenticated()
@@ -53,6 +54,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .logoutSuccessUrl("/")
                 .and()
                 .exceptionHandling().accessDeniedPage("/access_denied");
+        http.csrf().disable();
+        http.headers().frameOptions().disable();
     }
 
 //    @Bean
