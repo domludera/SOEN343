@@ -1,9 +1,13 @@
 <?xml version="1.0"?>
 <thlogic xmlns:th="http://www.thymeleaf.org">
+    <!--/* Workaround for IntelliJ cannot resolve vars bug -->
+    <!--@thymesVar id="user" type="com.soen343.gms.model.User"-->
+    <!--@thymesVar id="users" type="List<User>"-->
+    <!--*/-->
     <attr sel="#usersTable" th:remove="all-but-first">
         <attr sel="/tr[0]" th:each="user : ${users}">
-            <attr sel="td.username" th:text="${user.name}" />
-            <attr sel="td.usertype" th:text="#{|user.type.${user.type}|}" />
+            <attr sel="td.username" th:text="${user.username}" />
+            <attr sel="td.userrole" th:text="${user.role}" />
         </attr>
     </attr>
 </thlogic>
