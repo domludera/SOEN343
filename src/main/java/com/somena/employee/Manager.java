@@ -1,9 +1,12 @@
 package com.somena.employee;
 
+import lombok.Data;
+
 import java.util.Date;
 import java.util.List;
 
-public class Manager extends Employee{
+public @Data
+class Manager extends Employee{
 
     //assuming jobs are ref by ID which is  Long
     private List<Long> jobList;
@@ -13,11 +16,4 @@ public class Manager extends Employee{
         this.jobList = jobList;
     }
 
-    public List<Long> getJobList() {
-        return jobList;
-    }
-
-    public void setJobList(List<Long> jobList) {
-        this.jobList = jobList;
-    }
 }

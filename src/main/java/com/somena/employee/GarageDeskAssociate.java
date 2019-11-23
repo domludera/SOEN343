@@ -1,9 +1,12 @@
 package com.somena.employee;
 
+import lombok.Data;
+
 import java.util.Date;
 import java.util.List;
 
-public class GarageDeskAssociate extends Employee {
+public @Data
+class GarageDeskAssociate extends Employee {
 
 
     //GDA hold a list of customers they are serving, which ref by ID (Long)
@@ -14,11 +17,4 @@ public class GarageDeskAssociate extends Employee {
         this.customerList = customerList;
     }
 
-    public List<Long> getCustomerList() {
-        return customerList;
-    }
-
-    public void setCustomerList(List<Long> customerList) {
-        this.customerList = customerList;
-    }
 }

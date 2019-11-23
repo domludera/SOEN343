@@ -1,10 +1,11 @@
 package com.somena.employee;
 
 import com.somena.person.Person;
+import lombok.Data;
 
 import java.util.Date;
 
-public class Employee extends Person {
+public @Data class Employee extends Person {
 
     private Date startDate;
 
@@ -12,13 +13,4 @@ public class Employee extends Person {
         super(firstName, lastName, id);
         this.startDate = startDate;
     }
-
-    public Date getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
-
 }
