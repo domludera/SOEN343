@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="CreateJob.css">
+	<title>Create Job</title>
+</head>
+<body>
+<div id="main">
+	<div class="nav-container">
+		<div class="nav-left">
+			<button class="openbtn" onclick="openNav()">☰</button>
+			<div><img src="../car.svg"></div>
+			<div class="dash-text">Dashboard</div>
+		</div>
+		<div class="nav-right">
+			<div class="garage-text" >GarageBand</div>
+		</div>
+    </div>
+    <div  class= "job-container">
+        <form class="login-form">
+            <h1 class="title">Create Job</h1>
+            <div class="box">
+                <label class="login-label">Customer</label>
+                <input type="name" class="form-control" id="name" placeholder="Name" size = "35">
+            </div>
+            <div class="box">
+                <label class="login-label">VIN</label>
+                <input type="VIN" class="form-control" id="VIN" placeholder="VIN" size="35">
+            </div>
+            <div class="box">
+                <label class="login-label">Notes</label>
+                <textarea id="notes" class="form-control" placeholder="" rows="4" style="resize:none; overflow: hidden;"></textarea>
+            </div>
+            <button type="submit" class="default-button"><img src="../black-plus.svg"><div class="button-text">Create Job</div></button>
+        </form>
+    </div>
+</div>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <div class="side-bar-nav">
+  	  <img src="../cardot.svg">
+	  <a href="#" class="selected">Job Management</a>
+	  <img src="../downarrow.svg">
+  </div>
+  <div class="job-management_nav">
+  	<div>
+  		<img src="../creating-job.svg">
+  		<a href="">Create Job</a>
+    </div>
+  	<div class="jab-management_nav-selected">
+  		<img src="../job-bank.svg">
+  		<a href="">Job Bank</a>
+    </div>
+  	<div>
+  		<img src="../checkout.svg">
+  		<a href="">Checkout Job</a>
+    </div>
+  </div>
+  <div class="side-bar-nav">
+  	<img src="../archived.svg">
+  	<a href="#">Archived Jobs</a>
+  	<img src="">
+  </div>
+  <div class="side-bar-nav">
+  	  <img src="../schedule.svg">
+	  <a href="#">Schedule</a>
+	  <img src="">
+  </div>
+  <div class="side-bar-nav">
+  	  <img src="../creating-customer.svg">
+	  <a href="#">Creating Customer</a>
+  	  <img src="">
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "350px";
+  document.getElementById("main").style.marginLeft = "350px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</body>
+</html>
