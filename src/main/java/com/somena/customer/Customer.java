@@ -1,10 +1,12 @@
 package com.somena.customer;
 
 import com.somena.person.Person;
+import lombok.Data;
 
 import java.util.List;
 
-public class Customer extends Person {
+public @Data
+class Customer extends Person {
 
     private List<String> carVIN;
 
