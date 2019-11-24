@@ -42,9 +42,9 @@
   <div class="side-bar-nav">
   	  <img src="../cardot.svg">
 	  <a href="#" class="selected">Job Management</a>
-	  <img src="../downarrow.svg">
+	  <img class="chevron" onclick="growDiv();" src="../downarrow.svg">
   </div>
-  <div class="job-management_nav">
+  <div class="job-management_nav" id="grow">
   	<div>
   		<img src="../creating-job.svg">
   		<a href="">Create Job</a>
@@ -75,6 +75,7 @@
   </div>
 </div>
 
+
 <script>
 function openNav() {
   document.getElementById("mySidebar").style.width = "350px";
@@ -84,6 +85,18 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
+}
+
+function growDiv() {
+    var growDiv = document.querySelector(".job-management_nav");
+    var chevron = document.querySelector(".chevron");
+    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+    	growDiv.style.height = "144px";
+    	chevron.classList.add("selected");
+    } else {
+    	growDiv.style.height = "0px";
+    	chevron.classList.remove("selected");
+    }
 }
 </script>
 
