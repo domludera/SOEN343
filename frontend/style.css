@@ -6,7 +6,7 @@
 }
 
 body {
-	background-color: #121212;
+	background-color: #212121;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -160,3 +160,103 @@ body {
 	transform: rotate(0deg);
 	transition: transform 0.5s;
 }
+
+input {
+	border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
+}
+
+
+/*------- JOB BANK CSS ------------*/
+#main input {
+	border: 1px solid #818181;
+	border-radius: 3px;
+	width: 100%;
+	height: 45px;
+	background-color: #212121;
+	margin-top: 20px;
+}
+
+#main .content-area {
+	max-width: 782px;	
+	margin: auto;
+}
+
+#main .content-area input[type="text"]::placeholder {
+	color: #818181;
+	padding-left: 10px;
+	font-size: 16px;	
+}
+
+#main .content-area .job-bank_sort {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	margin-top: 40px;
+}
+
+#main .content-area .job-bank_sort span{
+	opacity: 0.6;
+	padding-right: 5px;
+}
+
+#main .content-area .job-bank_container {
+	margin-top: 10px;
+	height: 60vh;
+	background-color: #121212;
+	border: 1px solid grey;
+	border-radius: 3px;
+}
+
+#main .content-area .job-bank_container ul {
+
+}
+
+#main .content-area .job-bank_container ul li{
+	display: flex;
+	align-items: center;
+	height: 47px;
+	background-color: #212121;
+	border-radius: 5px;
+	margin-top: 5px;
+	width: 99.5%;
+	margin: auto;
+}
+
+#main .content-area .job-bank_container ul li span img {
+	margin-left: 10px;
+}
+
+#main .content-area .job-bank_container ul li span.job-bank_task {
+	color: #FFFFFF;
+	opacity: 0.85;
+	flex: 1 1;
+	margin-left: 10px;
+}
+
+#main .content-area .job-bank_container ul li span.job-bank_task-status {
+	color: #FFFFFF;
+	opacity: 0.85;
+	margin-right: 10px;
+}
+
+#main .content-area .job-bank_container ul li span.job-bank_task-status.in-progress {
+	color: #F2C94C;
+	opacity: 80%;
+}
+#main .content-area .job-bank_container ul li span.job-bank_task-status.pending {
+	color: #FFFFFF;
+	opacity: 65%%;
+}
+#main .content-area .job-bank_container ul li span.job-bank_task-status.finished {
+	color: #6FCF97;
+	opacity: 80%;
+}
+
+
+
+
