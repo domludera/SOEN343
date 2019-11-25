@@ -135,13 +135,32 @@ body {
 	margin-left: 40px;
 	height: 48px;
 	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.job-management_nav div a {
+	width: 100%;
+}
+
+.job-management_nav div.job-management_create-job_taskbank {
+	margin: 0;
+	max-width: 260px;
+	margin-left: 79px;
+	height: 0px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.job-management_nav div.job-management_create-job_taskbank div {
+	width: 100%;
 }
 
 .jab-management_nav-selected {
 	background-color: #444444;
 }
 
-#grow {
+#grow, #grow_taskbank {
     -moz-transition: height .5s;
     -ms-transition: height .5s;
     -o-transition: height .5s;
@@ -151,12 +170,12 @@ body {
     overflow: hidden;
 }
 
-.chevron {
+.chevron, .job-bank_chevron {
 	transform: rotate(-90deg);
 	transition: transform 0.5s;
 }
 
-.chevron.selected {
+.chevron.selected, .job-bank_chevron.selected {
 	transform: rotate(0deg);
 	transition: transform 0.5s;
 }
@@ -256,7 +275,6 @@ input {
 	color: #6FCF97;
 	opacity: 80%;
 }
-
 
 
 
