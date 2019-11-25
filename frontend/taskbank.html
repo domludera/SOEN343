@@ -38,8 +38,8 @@
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <div class="side-bar-nav">
-  	  <img onclick="growDiv();" src="cardot.svg">
-	  <a onclick="growDiv();" href="#" class="selected">Job Management</a>
+  	  <img src="cardot.svg">
+	  <a href="#" class="selected">Job Management</a>
 	  <img class="chevron" onclick="growDiv();" src="downarrow.svg">
   </div>
   <div class="job-management_nav" id="grow">
@@ -47,20 +47,9 @@
   		<img src="creating-job.svg">
   		<a href="">Create Job</a>
     </div>
-  	<div class="">
+  	<div class="jab-management_nav-selected">
   		<img src="job-bank.svg">
-  		<a onclick="growJobBank();">Job Bank</a>
-  		<img onclick="growJobBank();" class="job-bank_chevron" src="downarrow.svg">
-    </div>
-    <div class="job-management_create-job_taskbank" id="grow_taskbank">
-    	<div class="jab-management_nav-selected">
-    		<img src="Assets/magnifying.svg">
-    		<a href="">Search Job</a>
-    	</div>
-    	<div>
-    		<img src="taskbank.svg">
-    		<a href="">Task Bank</a>
-    	</div>
+  		<a href="">Job Bank</a>
     </div>
   	<div>
   		<img src="checkout.svg">
@@ -106,23 +95,6 @@ function growDiv() {
     	growDiv.style.height = "0px";
     	chevron.classList.remove("selected");
     }
-}
-
-function growJobBank(){
-    var growDiv = document.querySelector(".job-management_create-job_taskbank");
-    var growDivParent = document.querySelector(".job-management_nav");
-
-    var chevron = document.querySelector(".job-bank_chevron");
-    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
-    	growDiv.style.height = "96px";
-    	growDivParent.style.height = "240px";
-    	chevron.classList.add("selected");
-    } else {
-    	growDiv.style.height = "0px";
-    	growDivParent.style.height = "144px";
-    	chevron.classList.remove("selected");
-    }   
-
 }
 </script>
 
