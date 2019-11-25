@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="https://www.thymeleaf.org" lang="en">
+
 <head>
     <title>Home</title>
 </head>
 <body>
 <h1>Welcome! <span th:text="${username}"></span>, this is the home page.</h1>
 
-<table id="usersTable">
-    <tr>
-        <td class="username">Jeremy Grapefruit</td>
-        <td class="userrole">Normal User</td>
-    </tr>
-    <tr>
-        <td class="username">Alice Watermelon</td>
-        <td class="userrole">Administrator</td>
-    </tr>
+<table>
+    <th:block th:each="user : ${users}">
+        <tr>
+            <td th:text="${user.getUsername()}">...</td>
+            <td th:text="${user.getRole()}">...</td>
+        </tr>
+    </th:block>
 </table>
 
 <div>
