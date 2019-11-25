@@ -54,8 +54,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .logoutSuccessUrl("/")
                 .and()
                 .exceptionHandling().accessDeniedPage("/access_denied");
+
         http.csrf().disable();
         http.headers().frameOptions().disable();
+
     }
 
 //    @Bean
