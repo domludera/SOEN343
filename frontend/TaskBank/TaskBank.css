@@ -145,6 +145,7 @@ li{
     margin-bottom: 20px;
     margin: right;
     float: right;
+    align-items: center;
 }
 
 .button-text{
