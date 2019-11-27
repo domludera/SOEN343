@@ -1,6 +1,7 @@
 package com.soen343.gms.model.tastStatePattern;
 
 import com.soen343.gms.model.Task;
+import com.soen343.gms.model.tastStatePattern.invalidStateTransition.InvalidStateTransitionException;
 
 public class NewTaskState extends TaskState {
     public NewTaskState(Task task) {
@@ -8,17 +9,17 @@ public class NewTaskState extends TaskState {
     }
 
     @Override
-    public void nextState() {
-
+    public void nextState(Task contextTask) throws InvalidStateTransitionException {
+        contextTask.currentState = new InProgressTaskState(contextTask);
     }
 
     @Override
-    public void previousState() {
-
+    public void previousState(Task contextTask) throws InvalidStateTransitionException {
+        throw new InvalidStateTransitionException();
     }
 
     @Override
-    public String currentState() {
+    public String currentState(Task contextTask) {
         return null;
     }
 }

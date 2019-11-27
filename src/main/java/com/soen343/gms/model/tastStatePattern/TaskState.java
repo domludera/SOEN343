@@ -1,16 +1,17 @@
 package com.soen343.gms.model.tastStatePattern;
 
 import com.soen343.gms.model.Task;
+import com.soen343.gms.model.tastStatePattern.invalidStateTransition.InvalidStateTransitionException;
 
 public abstract class TaskState {
     protected Task taskWrapper;
 
-    public TaskState(Task task){
-        taskWrapper = task;
+    public TaskState(Task contextTask){
+        taskWrapper = contextTask;
     }
 
-    public abstract void nextState();
-    public abstract void previousState();
-    public abstract String currentState();
+    public abstract void nextState(Task contextTask) throws InvalidStateTransitionException;
+    public abstract void previousState(Task contextTask) throws InvalidStateTransitionException;
+    public abstract String currentState(Task contextTask);
 
 }
