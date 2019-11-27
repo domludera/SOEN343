@@ -4,10 +4,10 @@ import com.soen343.gms.model.Task;
 import com.soen343.gms.model.tastStatePattern.invalidStateTransition.InvalidStateTransitionException;
 
 public abstract class TaskState {
-    protected Task taskWrapper;
+    protected Task taskContext;
 
     public TaskState(Task contextTask){
-        taskWrapper = contextTask;
+        taskContext = contextTask;
     }
 
     public abstract void nextState(Task contextTask) throws InvalidStateTransitionException;

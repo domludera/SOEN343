@@ -10,16 +10,16 @@ public class InProgressTaskState extends TaskState {
 
     @Override
     public void nextState(Task contextTask) throws InvalidStateTransitionException {
-        
+        super.taskContext.currentState = new CompleteTaskState(contextTask);
     }
 
     @Override
     public void previousState(Task contextTask) throws InvalidStateTransitionException {
-
+        super.taskContext.currentState = new OnHoldTaskState(contextTask);
     }
 
     @Override
     public String currentState(Task contextTask) {
-        return null;
+        return "InProgressTaskState";
     }
 }

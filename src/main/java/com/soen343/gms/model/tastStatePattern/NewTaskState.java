@@ -10,7 +10,7 @@ public class NewTaskState extends TaskState {
 
     @Override
     public void nextState(Task contextTask) throws InvalidStateTransitionException {
-        contextTask.currentState = new InProgressTaskState(contextTask);
+        super.taskContext.currentState = new InProgressTaskState(contextTask);
     }
 
     @Override
@@ -20,6 +20,6 @@ public class NewTaskState extends TaskState {
 
     @Override
     public String currentState(Task contextTask) {
-        return null;
+        return "NewState";
     }
 }

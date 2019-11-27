@@ -2,6 +2,7 @@ package com.soen343.gms.model;
 
 import com.soen343.gms.model.tastStatePattern.NewTaskState;
 import com.soen343.gms.model.tastStatePattern.TaskState;
+import com.soen343.gms.model.tastStatePattern.invalidStateTransition.InvalidStateTransitionException;
 
 public class Task {
     public TaskState currentState;
@@ -11,12 +12,21 @@ public class Task {
     }
 
     public void goToNextState(){
-        //Will Have to be put in a try-catch since this may throw an invalidTransitionException
-        currentState.nextState();
+        try{
+            currentState.nextState(this);
+        }
+        catch(InvalidStateTransitionException e){
+            e.printStackTrace();
+        }
     }
 
     public void goToPreviousState(){
-        //Will Have to be put in a try-catch since this may throw an invalidTransitionException
-        currentState.previousState();
+        try{
+            currentState.previousState(this);
+        }
+        catch(InvalidStateTransitionException e){
+            e.printStackTrace();
+        }
+
     }
 }

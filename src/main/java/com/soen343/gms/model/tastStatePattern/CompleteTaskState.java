@@ -10,16 +10,14 @@ public class CompleteTaskState extends TaskState {
 
     @Override
     public void nextState(Task contextTask) throws InvalidStateTransitionException {
-
+        throw new InvalidStateTransitionException();
     }
 
     @Override
     public void previousState(Task contextTask) throws InvalidStateTransitionException {
-
+        throw new InvalidStateTransitionException();
     }
 
     @Override
-    public String currentState(Task contextTask) {
-        return null;
-    }
+    public String currentState(Task contextTask) { return "CompleteTaskState";}
 }
