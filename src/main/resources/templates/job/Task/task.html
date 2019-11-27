@@ -19,7 +19,7 @@
     </div>
     <div  class= "job-container">
         <form class="login-form">
-            <h1 class="title">Task Bank</h1>
+            <h1 class="title">Job's Tasks</h1>
             <br>
             <br>
             <div class="task-header">
@@ -37,7 +37,7 @@
                 </div> 
                 <br>
                 <div class="change-job-status">
-                    <button type="submit" class="default-button"><img src="../Assets/black-plus.svg"><div class="button-text">Create New Task</div></button>
+                    <button type="submit" class="default-button"><img src="../Assets/black-plus.svg"><div class="button-text">Add New Task</div></button>
                 </div>
         </form>
     </div>
@@ -65,10 +65,6 @@
         <img src="../Assets/magnifying.svg">
         <a href="">Search Job</a>
       </div>
-      <div>
-        <img src="../Assets/taskbank.svg">
-        <a href="">Task Bank</a>
-      </div>
     </div>
     <div>
       <img src="../Assets/checkout.svg">
@@ -94,45 +90,45 @@
 
 
 <script>
-function openNav() {
-  document.getElementById("mySidebar").style.width = "350px";
-  document.getElementById("main").style.marginLeft = "350px";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-
-function growDiv() {
-    var growDiv = document.querySelector(".job-management_nav");
-    var chevron = document.querySelector(".chevron");
-    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
-      growDiv.style.height = "144px";
-      chevron.classList.add("selected");
-    } else {
-      growDiv.style.height = "0px";
-      chevron.classList.remove("selected");
-    }
-}
-
-function growJobBank(){
-    var growDiv = document.querySelector(".job-management_create-job_taskbank");
-    var growDivParent = document.querySelector(".job-management_nav");
-
-    var chevron = document.querySelector(".job-bank_chevron");
-    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
-      growDiv.style.height = "96px";
-      growDivParent.style.height = "240px";
-      chevron.classList.add("selected");
-    } else {
-      growDiv.style.height = "0px";
-      growDivParent.style.height = "144px";
-      chevron.classList.remove("selected");
-    }   
-
-}
-</script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "350px";
+    document.getElementById("main").style.marginLeft = "350px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+  
+  function growDiv() {
+      var growDiv = document.querySelector(".job-management_nav");
+      var chevron = document.querySelector(".chevron");
+      if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+        growDiv.style.height = "144px";
+        chevron.classList.add("selected");
+      } else {
+        growDiv.style.height = "0px";
+        chevron.classList.remove("selected");
+      }
+  }
+  
+  function growJobBank(){
+      var growDiv = document.querySelector(".job-management_create-job_taskbank");
+      var growDivParent = document.querySelector(".job-management_nav");
+  
+      var chevron = document.querySelector(".job-bank_chevron");
+      if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+        growDiv.style.height = "48px";
+        growDivParent.style.height = "198px";
+        chevron.classList.add("selected");
+      } else {
+        growDiv.style.height = "0px";
+        growDivParent.style.height = "144px";
+        chevron.classList.remove("selected");
+      }   
+  
+  }
+  </script>
 
 </body>
 </html>

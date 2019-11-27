@@ -32,7 +32,7 @@
                 <label class="login-label">Notes</label>
                 <textarea id="notes" class="form-control" placeholder="" rows="4" style="resize:none; overflow: hidden;"></textarea>
             </div>
-            <button type="submit" class="default-button"><img src="../black-plus.svg"><div class="button-text">Create Job</div></button>
+            <button type="submit" class="default-button"><img src="../Assets/black-plus.svg"><div class="button-text">Create Job</div></button>
         </form>
     </div>
 </div>
@@ -58,10 +58,6 @@
       <div>
         <img src="../Assets/magnifying.svg">
         <a href="">Search Job</a>
-      </div>
-      <div>
-        <img src="../Assets/taskbank.svg">
-        <a href="">Task Bank</a>
       </div>
     </div>
     <div>
@@ -116,8 +112,8 @@ function growJobBank(){
 
     var chevron = document.querySelector(".job-bank_chevron");
     if(growDiv.style.height == "" || growDiv.style.height == "0px"){
-      growDiv.style.height = "96px";
-      growDivParent.style.height = "240px";
+      growDiv.style.height = "48px";
+      growDivParent.style.height = "198px";
       chevron.classList.add("selected");
     } else {
       growDiv.style.height = "0px";

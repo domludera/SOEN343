@@ -150,3 +150,9 @@ li{
 .button-text{
     font-weight: 500;
 }
+
+.change-job-status{
+    display:flex;
+    justify-content: space-between;
+    align-items: row;
+}
