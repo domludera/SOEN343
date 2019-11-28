@@ -269,12 +269,11 @@ input {
 }
 #main .content-area .job-bank_container ul li span.job-bank_task-status.pending {
 	color: #FFFFFF;
-	opacity: 65%%;
+	opacity: 65%;
 }
 #main .content-area .job-bank_container ul li span.job-bank_task-status.finished {
 	color: #6FCF97;
 	opacity: 80%;
 }
-
 
 
