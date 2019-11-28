@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="ViewJob.css">
 	<title>JobBank</title>
 </head>
-<body>
+<body onload="getStatusRemoveArchive()">
 <div id="main">
 	<div class="nav-container">
 		<div class="nav-left">
@@ -31,7 +31,7 @@
                 </div>
                 <div class="job-state">
                     <h2>State:&nbsp&nbsp</h2>
-                    <h3 class="in-progress">In Progress</h3>
+                    <h3 id="status" class="job-task-status in-progress">In Progress</h3>
                 </div>
             </div> 
             <br> 
@@ -45,7 +45,7 @@
                               <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
                               <div>
                                 <span class="status">State:&nbsp</span>
-                                <span class="job-task-status in-progress"> In Progress</span>
+                                <span class="job-task-status in-progress">In Progress</span>
                               </div>
                             </div>
                         </li>
@@ -53,8 +53,8 @@
                 </div> 
                 <br>
                 <div class="change-job-status">
-                    <button type="submit" class="default-button"><img src="../Assets/black-plus.svg"><div class="button-text">Manage Tasks</div></button>
-                    <button type="submit" class="default-button"><img src="../Assets/check.svg"><div class="button-text">Job Complete</div></button>
+                    <button id="manage-task-button" type="submit" class="default-button"><img src="../Assets/black-plus.svg"><div class="button-text">Manage Tasks</div></button>
+                    <button id="job-complete-button" type="submit" class="default-button"><img src="../Assets/check.svg"><div class="button-text">Job Complete</div></button>
                 </div>
         </form>
     </div>
@@ -144,6 +144,18 @@
         chevron.classList.remove("selected");
       }   
   
+  }
+
+  function getStatusRemoveArchive(){
+    console.log(document.getElementById('status').innerText)
+    if(document.getElementById('status').innerText === "Archived")
+    {
+      document.getElementById("manage-task-button").disabled = true;
+      document.getElementById("job-complete-button").disabled = true;
+    }
+  }
+  {
+
   }
   </script>
 

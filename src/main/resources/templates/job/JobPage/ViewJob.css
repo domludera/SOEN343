@@ -149,6 +149,10 @@ li{
     align-items: center;
 }
 
+.default-button:disabled{
+    visibility: hidden;
+}
+
 .button-text{
     font-weight: 500;
 }
