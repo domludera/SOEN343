@@ -156,3 +156,8 @@ li{
     justify-content: space-between;
     align-items: row;
 }
+
+.status{
+    color: #FFFFFF;
+	opacity: 80%;
+}
