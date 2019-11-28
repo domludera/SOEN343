@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../static/css/taskbank.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="TaskBank.css">
     <title>TaskBank</title>
 </head>
 <body>
@@ -10,7 +10,7 @@
     <div class="nav-container">
         <div class="nav-left">
             <button class="openbtn" onclick="openNav()">☰</button>
-            <div><img src="../../static/img/car.svg"></div>
+            <div><img src="../Assets/car.svg"></div>
             <div class="dash-text">Dashboard</div>
         </div>
         <div class="nav-right">
@@ -19,7 +19,7 @@
     </div>
     <div  class= "job-container">
         <form class="login-form">
-            <h1 class="title">Task Bank</h1>
+            <h1 class="title">Job's Tasks</h1>
             <br>
             <br>
             <div class="task-header">
@@ -29,15 +29,35 @@
                 <ul style="list-style-type:none">
                     <li>
                         <div class="task-container">
-                            <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
-                            <span><img src="../../static/img/three-points.svg"> </span>
-                        </div>
+                            <div class="task-bank-check">
+                                <label class="container">
+                                    <input type="checkbox" class="task-checkbox" value="Task">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
+                            </div>
+                            <span>
+                      <button type="button" class="remove-button" onclick="removeList(this)"><div class="button-text">Remove Task</div></button>
+                    </span>
+                    </li>
+                    <li>
+                        <div class="task-container">
+                            <div class="task-bank-check">
+                                <label class="container">
+                                    <input type="checkbox" class="task-checkbox" value="Task">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <span class="task-bank-task"><h3>r - Audi 2015</h3></span>
+                            </div>
+                            <span>
+                        <button type="submit" class="remove-button" onclick="removeList(this)"><div class="button-text">Remove Task</div></button>
+                      </span>
                     </li>
                 </ul>
             </div>
             <br>
             <div class="change-job-status">
-                <button type="submit" class="default-button"><img src="../../static/img/black-plus.svg"><div class="button-text">Create New Task</div></button>
+                <button type="submit" class="default-button"><img src="../Assets/black-plus.svg"><div class="button-text">Add New Task</div></button>
             </div>
         </form>
     </div>
@@ -46,47 +66,43 @@
 <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <div class="side-bar-nav">
-        <img onclick="growDiv();" src="../../static/img/cardot.svg">
+        <img onclick="growDiv();" src="../Assets/cardot.svg">
         <a onclick="growDiv();" href="#" class="selected">Job Management</a>
-        <img class="chevron" onclick="growDiv();" src="../../static/img/downarrow.svg">
+        <img class="chevron" onclick="growDiv();" src="../Assets/downarrow.svg">
     </div>
     <div class="job-management_nav" id="grow">
         <div>
-            <img src="../../static/img/creating-job.svg">
+            <img src="../Assets/creating-job.svg">
             <a href="">Create Job</a>
         </div>
         <div class="">
-            <img src="../../static/img/job-bank.svg">
+            <img src="../Assets/job-bank.svg">
             <a onclick="growJobBank();">Job Bank</a>
-            <img onclick="growJobBank();" class="job-bank_chevron" src="../../static/img/downarrow.svg">
+            <img onclick="growJobBank();" class="job-bank_chevron" src="../Assets/downarrow.svg">
         </div>
         <div class="job-management_create-job_taskbank" id="grow_taskbank">
             <div>
-                <img src="../../static/img/magnifying.svg">
+                <img src="../Assets/magnifying.svg">
                 <a href="">Search Job</a>
-            </div>
-            <div>
-                <img src="../../static/img/taskbank.svg">
-                <a href="">Task Bank</a>
             </div>
         </div>
         <div>
-            <img src="../../static/img/checkout.svg">
+            <img src="../Assets/checkout.svg">
             <a href="">Checkout Job</a>
         </div>
     </div>
     <div class="side-bar-nav">
-        <img src="../../static/img/archived.svg">
+        <img src="../Assets/archived.svg">
         <a href="#">Archived Jobs</a>
         <img src="">
     </div>
     <div class="side-bar-nav">
-        <img src="../../static/img/schedule.svg">
+        <img src="../Assets/schedule.svg">
         <a href="#">Schedule</a>
         <img src="">
     </div>
     <div class="side-bar-nav">
-        <img src="../../static/img/creating-customer.svg">
+        <img src="../Assets/creating-customer.svg">
         <a href="#">Creating Customer</a>
         <img src="">
     </div>
@@ -94,45 +110,52 @@
 
 
 <script>
-function openNav() {
-  document.getElementById("mySidebar").style.width = "350px";
-  document.getElementById("main").style.marginLeft = "350px";
-}
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "350px";
+    document.getElementById("main").style.marginLeft = "350px";
+  }
 
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
 
-function growDiv() {
-    var growDiv = document.querySelector(".job-management_nav");
-    var chevron = document.querySelector(".chevron");
-    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
-      growDiv.style.height = "144px";
-      chevron.classList.add("selected");
-    } else {
-      growDiv.style.height = "0px";
-      chevron.classList.remove("selected");
-    }
-}
+  function growDiv() {
+      var growDiv = document.querySelector(".job-management_nav");
+      var chevron = document.querySelector(".chevron");
+      if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+        growDiv.style.height = "144px";
+        chevron.classList.add("selected");
+      } else {
+        growDiv.style.height = "0px";
+        chevron.classList.remove("selected");
+      }
+  }
 
-function growJobBank(){
-    var growDiv = document.querySelector(".job-management_create-job_taskbank");
-    var growDivParent = document.querySelector(".job-management_nav");
+  function growJobBank(){
+      var growDiv = document.querySelector(".job-management_create-job_taskbank");
+      var growDivParent = document.querySelector(".job-management_nav");
 
-    var chevron = document.querySelector(".job-bank_chevron");
-    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
-      growDiv.style.height = "96px";
-      growDivParent.style.height = "240px";
-      chevron.classList.add("selected");
-    } else {
-      growDiv.style.height = "0px";
-      growDivParent.style.height = "144px";
-      chevron.classList.remove("selected");
-    }
+      var chevron = document.querySelector(".job-bank_chevron");
+      if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+        growDiv.style.height = "48px";
+        growDivParent.style.height = "198px";
+        chevron.classList.add("selected");
+      } else {
+        growDiv.style.height = "0px";
+        growDivParent.style.height = "144px";
+        chevron.classList.remove("selected");
+      }
 
-}
-</script>
+  }
+
+  function removeList(e)
+  {
+    console.log(e);
+    console.log(e.parentNode.parentNode.parentNode);
+    e.parentNode.parentNode.parentNode.remove();
+  }
+  </script>
 
 </body>
 </html>
