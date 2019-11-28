@@ -37,9 +37,22 @@
                         <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>                    
                     </div>
                     <span> 
-                      <button type="submit" class="remove-button"><div class="button-text">Remove Task</div></button>
+                      <button type="button" class="remove-button" onclick="removeList(this)"><div class="button-text">Remove Task</div></button>
                     </span>
                 </li>
+                <li> 
+                    <div class="task-container">
+                      <div class="task-bank-check">
+                          <label class="container">
+                            <input type="checkbox" class="task-checkbox" value="Task">
+                            <span class="checkmark"></span>
+                          </label>  
+                          <span class="task-bank-task"><h3>r - Audi 2015</h3></span>                    
+                      </div>
+                      <span> 
+                        <button type="button" class="remove-button" onclick="removeList(this)"><div class="button-text">Remove Task</div></button>
+                      </span>
+                  </li>
               </ul>
             </div> 
                 <br>
@@ -134,6 +147,13 @@
         chevron.classList.remove("selected");
       }   
   
+  }
+
+  function removeList(e)
+  {
+    console.log(e);
+    console.log(e.parentNode.parentNode.parentNode);
+    e.parentNode.parentNode.parentNode.remove();
   }
   </script>
 
