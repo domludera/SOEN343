@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="Checkout.css">
+  
+	<title>Checkout</title>
+</head>
+<body>
+<div id="main">
+	<div class="nav-container">
+		<div class="nav-left">
+			<button class="openbtn" onclick="openNav()">☰</button>
+			<div><img src="../Assets/car.svg"></div>
+			<div class="dash-text">Dashboard</div>
+		</div>
+		<div class="nav-right">
+			<div class="garage-text" >GarageBand</div>
+		</div>
+	</div>
+	<div class="content-area">
+		<h1 class="title">Checkout</h1>
+		<div class="job-bank_container">
+			<ul>
+				<li> 
+					<span><img src="../Assets/white-plus.svg"></span> 
+					<span class="job-bank_task">Windsheild Repair - Audi 2015</span>
+					<div class="status-div">
+					<span class="status">Status: &nbsp</span>
+					<span class="job-bank_task-status finished">Completed</span>
+					<span> <button type="submit" class="remove-button"><div class="button-text">Checkout</div></button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <div class="side-bar-nav">
+  	  <img onclick="growDiv();" src="../Assets/cardot.svg">
+	  <a onclick="growDiv();" href="#" class="selected">Job Management</a>
+	  <img class="chevron" onclick="growDiv();" src="../Assets/downarrow.svg">
+  </div>
+  <div class="job-management_nav" id="grow">
+  	<div>
+  		<img src="../Assets/creating-job.svg">
+  		<a href="">Create Job</a>
+    </div>
+  	<div class="">
+  		<img src="../Assets/job-bank.svg">
+  		<a onclick="growJobBank();">Job Bank</a>
+  		<img onclick="growJobBank();" class="job-bank_chevron" src="../Assets/downarrow.svg">
+    </div>
+    <div class="job-management_create-job_taskbank" id="grow_taskbank">
+    	<div class="jab-management_nav-selected">
+    		<img src="../Assets/magnifying.svg">
+    		<a href="">Search Job</a>
+    	</div>
+    </div>
+  	<div>
+  		<img src="../Assets/checkout.svg">
+  		<a href="">Checkout Job</a>
+    </div>
+  </div>
+  <div class="side-bar-nav">
+  	<img src="../Assets/archived.svg">
+  	<a href="#">Archived Jobs</a>
+  	<img src="">
+  </div>
+  <div class="side-bar-nav">
+  	  <img src="../Assets/schedule.svg">
+	  <a href="#">Schedule</a>
+	  <img src="">
+  </div>
+  <div class="side-bar-nav">
+  	  <img src="../Assets/creating-customer.svg">
+	  <a href="#">Creating Customer</a>
+  	  <img src="">
+  </div>
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "350px";
+  document.getElementById("main").style.marginLeft = "350px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+function growDiv() {
+    var growDiv = document.querySelector(".job-management_nav");
+    var chevron = document.querySelector(".chevron");
+    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+    	growDiv.style.height = "144px";
+    	chevron.classList.add("selected");
+    } else {
+    	growDiv.style.height = "0px";
+    	chevron.classList.remove("selected");
+    }
+}
+
+function growJobBank(){
+    var growDiv = document.querySelector(".job-management_create-job_taskbank");
+    var growDivParent = document.querySelector(".job-management_nav");
+
+    var chevron = document.querySelector(".job-bank_chevron");
+    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+    	growDiv.style.height = "96px";
+    	growDivParent.style.height = "240px";
+    	chevron.classList.add("selected");
+    } else {
+    	growDiv.style.height = "0px";
+    	growDivParent.style.height = "144px";
+    	chevron.classList.remove("selected");
+    }   
+
+}
+</script><script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "350px";
+  document.getElementById("main").style.marginLeft = "350px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+function growDiv() {
+    var growDiv = document.querySelector(".job-management_nav");
+    var chevron = document.querySelector(".chevron");
+    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+      growDiv.style.height = "144px";
+      chevron.classList.add("selected");
+    } else {
+      growDiv.style.height = "0px";
+      chevron.classList.remove("selected");
+    }
+}
+
+function growJobBank(){
+    var growDiv = document.querySelector(".job-management_create-job_taskbank");
+    var growDivParent = document.querySelector(".job-management_nav");
+
+    var chevron = document.querySelector(".job-bank_chevron");
+    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+      growDiv.style.height = "48px";
+      growDivParent.style.height = "198px";
+      chevron.classList.add("selected");
+    } else {
+      growDiv.style.height = "0px";
+      growDivParent.style.height = "144px";
+      chevron.classList.remove("selected");
+    }   
+
+}
+</script>
+
+</body>
+</html>
