@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Sign up</title>
+</head>
+<body>
+<form th:action="@{/signup}" th:object="${user}" method="post">
+    <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
+    <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+    <div><label> Username: <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><label> Role: <select name="role">
+        <option value="ADMIN">Admin</option>
+        <option value="SERVICE">Service</option>
+        <option value="MECHANIC">Mechanic</option>
+        <option value="GOD">God</option>
+    </select> </label></div>
+    <div><input type="submit" value="Register"/></div>
+    <div> Already have an account? <a th:href="@{/login}">Log in</a></div>
+</form>
+</body>
+</html>
