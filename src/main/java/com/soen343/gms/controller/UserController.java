@@ -69,4 +69,18 @@ public class UserController {
         model.setViewName("error/access_denied");
         return model;
     }
+
+    @RequestMapping(value={"/home/job/createjob"}, method=RequestMethod.GET)
+    public ModelAndView createjob(){
+        ModelAndView model = new ModelAndView();
+        model.setViewName("job/createjob");
+        return model;
+    }
+
+    @RequestMapping(value={"home/job/checkout"}, method=RequestMethod.GET)
+    public ModelAndView checkout(){
+        ModelAndView model = new ModelAndView();
+        model.setViewName("job/checkout");
+        return model;
+    }
 }
