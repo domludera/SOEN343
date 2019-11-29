@@ -162,24 +162,24 @@
         <img class="chevron" onclick="growDiv();" th:src="@{/img/downarrow.svg}">
     </div>
     <div class="job-management_nav" id="grow">
-        <div class="jab-management_nav-selected">
+        <div>
             <img th:src="@{/img/creating-job.svg}">
-            <a href="">Create Job</a>
+            <a th:href="@{/home/job/createjob}">Create Job</a>
         </div>
         <div class="">
             <img th:src="@{/img/job-bank.svg}">
-            <a onclick="growJobBank();">Job Bank</a>
+            <a onclick="growJobBank();" href="#">Job Bank</a>
             <img onclick="growJobBank();" class="job-bank_chevron" th:src="@{/img/downarrow.svg}">
         </div>
         <div class="job-management_create-job_taskbank" id="grow_taskbank">
             <div>
                 <img th:src="@{/img/magnifying.svg}">
-                <a href="">Search Job</a>
+                <a th:href="@{/home/job/jobbank}">Search Job</a>
             </div>
         </div>
         <div>
             <img th:src="@{/img/checkout.svg}">
-            <a href="">Checkout Job</a>
+            <a th:href="@{/home/job/checkout}">Checkout Job</a>
         </div>
     </div>
     <div class="side-bar-nav">
