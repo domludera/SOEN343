@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="https://www.thymeleaf.org" lang="en">
-<head  lang="en">
+<head>
     <link type="text/css"  th:href="@{/css/style.css}" rel="stylesheet"/>
     <link type="text/css"  th:href="@{/css/login.css}" rel="stylesheet" />
     <title>Login</title>
@@ -14,14 +14,14 @@
     <div  class= "container">
         <form  th:action="@{/login}" method="post" class="login-form" >
             <h1>Login</h1>
+            <div th:if="${msg}" th:utext="${msg}"></div>
             <div class="employeeID-box">
-                <div th:if="${msg}" th:utext="${msg}"></div>
                 <label class="login-label">Identification</label>
-                <input type="employeeID" class="form-control" id="employeeID" placeholder="Employee Identification" size = "35" required autofocus>
+                <input type="text" name="username" class="form-control" id="employeeID" placeholder="Employee Identification" size = "35" required autofocus>
             </div>
             <div class="password-box">
                 <label class="login-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password" size="35" required>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Password" size="35" required>
             </div>
             <div th:if="${param.error}" class="login-label">
                 Invalid username or password.
