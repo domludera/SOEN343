@@ -24,12 +24,13 @@
                 <input type="password" class="form-control" id="password" placeholder="Password" size="35">
             </div>
             <div th:if="${param.error}" class="login-label">
-                Invalid username and/or password.
+                Invalid username or password.
             </div>
             <div th:if="${param.logout}" class="login-label">
                 You have been logged out.
             </div>
             <button type="submit" class="default-button">Login</button>
+            <div class="login-label"> Don't have an account, make one  <a th:href="@{/signup}">here</a></div>
         </form>
     </div>
 </body>
