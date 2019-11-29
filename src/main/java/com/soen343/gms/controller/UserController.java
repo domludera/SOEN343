@@ -73,10 +73,6 @@ public class UserController {
     @RequestMapping(value={"/home/job/createjob"}, method=RequestMethod.GET)
     public ModelAndView createjob(){
         ModelAndView model = new ModelAndView();
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = userService.findUserByUsername(auth.getName());
-        model.addObject("username", user.getUsername());
-        model.addObject("users", userService.findAll());
         model.setViewName("job/createjob");
         return model;
     }
