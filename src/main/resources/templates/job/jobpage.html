@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../static/css/viewjob.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="ViewJob.css">
     <title>JobBank</title>
 </head>
-<body>
+<body onload="getStatusRemoveArchive()">
 <div id="main">
     <div class="nav-container">
         <div class="nav-left">
             <button class="openbtn" onclick="openNav()">☰</button>
-            <div><img src="../../static/img/car.svg"></div>
+            <div><img src="../Assets/car.svg"></div>
             <div class="dash-text">Dashboard</div>
         </div>
         <div class="nav-right">
@@ -22,7 +22,7 @@
             <h1 class="title">Job #9800</h1>
             <div class="box">
                 <label class="login-label"><h2>Details</h2></label>
-                <textarea id="notes" class="form-control" placeholder="this is a description" rows="4" readonly style="resize:none; overflow: hidden;"></textarea>
+                <textarea id="notes" class="form-control" rows="4" readonly style="resize:none; overflow: hidden;">This is a description</textarea>
             </div>
             <div class=job-information-container>
                 <div class="manager-information-container">
@@ -31,75 +31,75 @@
                 </div>
                 <div class="job-state">
                     <h2>State:&nbsp&nbsp</h2>
-                    <h3 class="in-progress">In Progress</h3>
+                    <h3 id="status" class="job-task-status in-progress">In Progress</h3>
                 </div>
             </div>
             <br>
             <div class="task-header">
-                <h2>Current Task</h2>
+                <h2>Job's Tasks</h2>
             </div>
             <div class= "task-bank-container">
                 <ul style="list-style-type:none">
                     <li>
                         <div class="task-container">
                             <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
-                            <span class="job-task-status in-progress"> In Progress</span>
+                            <div>
+                                <span class="status">State:&nbsp</span>
+                                <span class="job-task-status in-progress">In Progress</span>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
             <br>
-            <div class="change-job-status"></div>
-            <button type="submit" class="default-button"><img src="../../static/img/black-plus.svg"><div class="button-text">Manage Task</div></button>
+            <div class="change-job-status">
+                <button id="manage-task-button" type="submit" class="default-button"><img src="../Assets/black-plus.svg"><div class="button-text">Manage Tasks</div></button>
+                <button id="job-complete-button" type="submit" class="default-button"><img src="../Assets/check.svg"><div class="button-text">Job Complete</div></button>
+            </div>
+        </form>
     </div>
-    </form>
-</div>
 </div>
 
 <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <div class="side-bar-nav">
-        <img onclick="growDiv();" src="../../static/img/cardot.svg">
+        <img onclick="growDiv();" src="../Assets/cardot.svg">
         <a onclick="growDiv();" href="#" class="selected">Job Management</a>
-        <img class="chevron" onclick="growDiv();" src="../../static/img/downarrow.svg">
+        <img class="chevron" onclick="growDiv();" src="../Assets/downarrow.svg">
     </div>
     <div class="job-management_nav" id="grow">
         <div>
-            <img src="../../static/img/creating-job.svg">
+            <img src="../Assets/creating-job.svg">
             <a href="">Create Job</a>
         </div>
         <div class="">
-            <img src="../../static/img/job-bank.svg">
+            <img src="../Assets/job-bank.svg">
             <a onclick="growJobBank();">Job Bank</a>
-            <img onclick="growJobBank();" class="job-bank_chevron" src="../../static/img/downarrow.svg">
+            <img onclick="growJobBank();" class="job-bank_chevron" src="../Assets/downarrow.svg">
         </div>
         <div class="job-management_create-job_taskbank" id="grow_taskbank">
             <div>
-                <img src="../../static/img/magnifying.svg">
+                <img src="../Assets/magnifying.svg">
                 <a href="">Search Job</a>
-            </div>
-            <div>
-                <img src="../../static/img/taskbank.svg">
-                <a href="">Task Bank</a>
             </div>
         </div>
         <div>
-            <img src="../../static/img/checkout.svg">
+            <img src="../Assets/checkout.svg">
             <a href="">Checkout Job</a>
         </div>
     </div>
     <div class="side-bar-nav">
-        <img src="../../static/img/archived.svg">
+        <img src="../Assets/archived.svg">
         <a href="#">Archived Jobs</a>
         <img src="">
     </div>
     <div class="side-bar-nav">
-        <img src="../../static/img/schedule.svg">
+        <img src="../Assets/schedule.svg">
         <a href="#">Schedule</a>
         <img src="">
     </div>
     <div class="side-bar-nav">
-        <img src="../../static/img/creating-customer.svg">
+        <img src="../Assets/creating-customer.svg">
         <a href="#">Creating Customer</a>
         <img src="">
     </div>
@@ -107,45 +107,57 @@
 
 
 <script>
-function openNav() {
-  document.getElementById("mySidebar").style.width = "350px";
-  document.getElementById("main").style.marginLeft = "350px";
-}
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "350px";
+    document.getElementById("main").style.marginLeft = "350px";
+  }
 
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
 
-function growDiv() {
-    var growDiv = document.querySelector(".job-management_nav");
-    var chevron = document.querySelector(".chevron");
-    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
-      growDiv.style.height = "144px";
-      chevron.classList.add("selected");
-    } else {
-      growDiv.style.height = "0px";
-      chevron.classList.remove("selected");
+  function growDiv() {
+      var growDiv = document.querySelector(".job-management_nav");
+      var chevron = document.querySelector(".chevron");
+      if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+        growDiv.style.height = "144px";
+        chevron.classList.add("selected");
+      } else {
+        growDiv.style.height = "0px";
+        chevron.classList.remove("selected");
+      }
+  }
+
+  function growJobBank(){
+      var growDiv = document.querySelector(".job-management_create-job_taskbank");
+      var growDivParent = document.querySelector(".job-management_nav");
+
+      var chevron = document.querySelector(".job-bank_chevron");
+      if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+        growDiv.style.height = "48px";
+        growDivParent.style.height = "198px";
+        chevron.classList.add("selected");
+      } else {
+        growDiv.style.height = "0px";
+        growDivParent.style.height = "144px";
+        chevron.classList.remove("selected");
+      }
+
+  }
+
+  function getStatusRemoveArchive(){
+    console.log(document.getElementById('status').innerText)
+    if(document.getElementById('status').innerText === "Archived")
+    {
+      document.getElementById("manage-task-button").disabled = true;
+      document.getElementById("job-complete-button").disabled = true;
     }
-}
+  }
+  {
 
-function growJobBank(){
-    var growDiv = document.querySelector(".job-management_create-job_taskbank");
-    var growDivParent = document.querySelector(".job-management_nav");
-
-    var chevron = document.querySelector(".job-bank_chevron");
-    if(growDiv.style.height == "" || growDiv.style.height == "0px"){
-      growDiv.style.height = "96px";
-      growDivParent.style.height = "240px";
-      chevron.classList.add("selected");
-    } else {
-      growDiv.style.height = "0px";
-      growDivParent.style.height = "144px";
-      chevron.classList.remove("selected");
-    }   
-
-}
-</script>
+  }
+  </script>
 
 </body>
 </html>

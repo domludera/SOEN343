@@ -28,6 +28,7 @@ html{
     margin-right: 20px;
     background-color: #2f2f2f;
     width: 40vw;
+    color: #FFFFFF;
 }
 
 .login-form{
@@ -54,13 +55,13 @@ html{
 
 h2{
     font-size: 14px;
-    font-weight: 900; 
+    font-weight: 900;
     color: #FFFFFF
 }
 
 h3{
     font-size: 14px;
-    font-weight: 400; 
+    font-weight: 400;
     color: #FFFFFF
 }
 
@@ -80,7 +81,7 @@ h3{
     padding-left: 30px;
     padding-right:30px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 .job-state{
     display: flex;
@@ -114,7 +115,8 @@ h3{
 	height: 30vh;
 	background-color: #121212;
 	border: 1px solid grey;
-	border-radius: 3px;
+    border-radius: 3px;
+    overflow-y:scroll;
 }
 
 li{
@@ -147,6 +149,20 @@ li{
     align-items: center;
 }
 
+.default-button:disabled{
+    visibility: hidden;
+}
+
 .button-text{
     font-weight: 500;
+}
+
+.change-job-status{
+    display:flex;
+    justify-content: space-between;
+    align-items: row;
+}
+.status {
+	color: #FFFFFF;
+	opacity: 80%;
 }
