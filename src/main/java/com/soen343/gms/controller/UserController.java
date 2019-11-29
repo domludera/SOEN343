@@ -90,4 +90,12 @@ public class UserController {
         model.setViewName("job/jobbank");
         return model;
     }
+
+    @RequestMapping(value={"/home/job/archivedjobs"}, method=RequestMethod.GET)
+    public ModelAndView archivedjobs(){
+        ModelAndView model = new ModelAndView();
+        model.setViewName("job/archivedjob");
+        return model;
+    }
+
 }

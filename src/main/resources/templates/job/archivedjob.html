@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/archivedjob.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{/css/checkout.css}">
 
-    <title>Checkout</title>
+    <title>Archived Jobs</title>
 </head>
 <body>
 <div id="main">
@@ -19,17 +19,13 @@
         </div>
     </div>
     <div class="content-area">
-        <h1 class="title">Checkout</h1>
+        <h1 class="title">Archive Job</h1>
         <div class="job-bank_container">
             <ul>
                 <li>
                     <span><img th:src="@{/img/white-plus.svg}"></span>
                     <span class="job-bank_task">Windsheild Repair - Audi 2015</span>
-                    <div class="status-div">
-                        <span class="status">Status: &nbsp</span>
-                        <span class="job-bank_task-status finished">Completed</span>
-                        <span> <button type="submit" class="remove-button"><div class="button-text">Checkout</div></button>
-                    </div>
+                    <span class="job-bank_task-status finished">Archived</span>
                 </li>
             </ul>
         </div>
