@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="https://www.thymeleaf.org" lang="en">
+<html>
 <head>
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
-    <title>Home</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/TaskBank.css}">
+    <title>TaskBank</title>
 </head>
 <body>
 <div id="main">
@@ -17,6 +17,50 @@
             <div class="garage-text" >GarageBand</div>
         </div>
     </div>
+    <div  class= "job-container">
+        <form class="login-form">
+            <h1 class="title">Job's Tasks</h1>
+            <br>
+            <br>
+            <div class="task-header">
+                <h2>Tasks</h2>
+            </div>
+            <div class= "task-bank-container">
+                <ul style="list-style-type:none">
+                    <li>
+                        <div class="task-container">
+                            <div class="task-bank-check">
+                                <label class="container">
+                                    <input type="checkbox" class="task-checkbox" value="Task">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
+                            </div>
+                            <span>
+                      <button type="button" class="remove-button" onclick="removeList(this)"><div class="button-text">Remove Task</div></button>
+                    </span>
+                    </li>
+                    <li>
+                        <div class="task-container">
+                            <div class="task-bank-check">
+                                <label class="container">
+                                    <input type="checkbox" class="task-checkbox" value="Task">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <span class="task-bank-task"><h3>r - Audi 2015</h3></span>
+                            </div>
+                            <span>
+                        <button type="submit" class="remove-button" onclick="removeList(this)"><div class="button-text">Remove Task</div></button>
+                      </span>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="change-job-status">
+                <button type="submit" class="default-button"><img th:src="@{/img/black-plus.svg}"><div class="button-text">Add New Task</div></button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <div id="mySidebar" class="sidebar">
@@ -29,27 +73,27 @@
     <div class="job-management_nav" id="grow">
         <div>
             <img th:src="@{/img/creating-job.svg}">
-            <a th:href="@{/home/job/createjob}">Create Job</a>
+            <a href="">Create Job</a>
         </div>
         <div class="">
             <img th:src="@{/img/job-bank.svg}">
-            <a onclick="growJobBank();" href="#">Job Bank</a>
+            <a onclick="growJobBank();">Job Bank</a>
             <img onclick="growJobBank();" class="job-bank_chevron" th:src="@{/img/downarrow.svg}">
         </div>
         <div class="job-management_create-job_taskbank" id="grow_taskbank">
             <div>
                 <img th:src="@{/img/magnifying.svg}">
-                <a th:href="@{/home/job/jobbank}">Search Job</a>
+                <a href="">Search Job</a>
             </div>
         </div>
         <div>
             <img th:src="@{/img/checkout.svg}">
-            <a th:href="@{/home/job/checkout}">Checkout Job</a>
+            <a href="">Checkout Job</a>
         </div>
     </div>
     <div class="side-bar-nav">
         <img th:src="@{/img/archived.svg}">
-        <a th:href="@{/home/job/archivedjobs}">Archived Jobs</a>
+        <a href="#">Archived Jobs</a>
     
     </div>
     <div class="side-bar-nav">
@@ -61,9 +105,6 @@
         <img th:src="@{/img/creating-customer.svg}">
         <a href="#">Creating Customer</a>
     
-    </div>
-    <div>
-        <a th:href="@{/logout}">Sign out</a>
     </div>
 </div>
 
@@ -106,6 +147,13 @@
         chevron.classList.remove("selected");
       }
 
+  }
+
+  function removeList(e)
+  {
+    console.log(e);
+    console.log(e.parentNode.parentNode.parentNode);
+    e.parentNode.parentNode.parentNode.remove();
   }
   </script>
 

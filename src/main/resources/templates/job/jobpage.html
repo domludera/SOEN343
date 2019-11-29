@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="https://www.thymeleaf.org" lang="en">
+<html>
 <head>
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
-    <title>Home</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/viewjob.css}">
+    <title>JobBank</title>
 </head>
-<body>
+<body onload="getStatusRemoveArchive()">
 <div id="main">
     <div class="nav-container">
         <div class="nav-left">
@@ -16,6 +16,47 @@
         <div class="nav-right">
             <div class="garage-text" >GarageBand</div>
         </div>
+    </div>
+    <div  class= "job-container">
+        <form class="login-form">
+            <h1 class="title">Job #9800</h1>
+            <div class="box">
+                <label class="login-label"><h2>Details</h2></label>
+                <textarea id="notes" class="form-control" rows="4" readonly style="resize:none; overflow: hidden;">This is a description</textarea>
+            </div>
+            <div class=job-information-container>
+                <div class="manager-information-container">
+                    <h2>Managed By:&nbsp</h2>
+                    <h3>John Doe</h3>
+                </div>
+                <div class="job-state">
+                    <h2>State:&nbsp&nbsp</h2>
+                    <h3 id="status" class="job-task-status in-progress">In Progress</h3>
+                </div>
+            </div>
+            <br>
+            <div class="task-header">
+                <h2>Job's Tasks</h2>
+            </div>
+            <div class= "task-bank-container">
+                <ul style="list-style-type:none">
+                    <li>
+                        <div class="task-container">
+                            <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
+                            <div>
+                                <span class="status">State:&nbsp</span>
+                                <span class="job-task-status in-progress">In Progress</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="change-job-status">
+                <button id="manage-task-button" type="submit" class="default-button"><img th:src="@{/img/black-plus.svg}"><div class="button-text">Manage Tasks</div></button>
+                <button id="job-complete-button" type="submit" class="default-button"><img th:src="@{/img/check.svg}"><div class="button-text">Job Complete</div></button>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -67,7 +108,6 @@
     </div>
 </div>
 
-
 <script>
   function openNav() {
     document.getElementById("mySidebar").style.width = "350px";
@@ -105,6 +145,18 @@
         growDivParent.style.height = "144px";
         chevron.classList.remove("selected");
       }
+
+  }
+
+  function getStatusRemoveArchive(){
+    console.log(document.getElementById('status').innerText)
+    if(document.getElementById('status').innerText === "Archived")
+    {
+      document.getElementById("manage-task-button").disabled = true;
+      document.getElementById("job-complete-button").disabled = true;
+    }
+  }
+  {
 
   }
   </script>
