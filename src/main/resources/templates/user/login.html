@@ -17,11 +17,11 @@
             <div class="employeeID-box">
                 <div th:if="${msg}" th:utext="${msg}"></div>
                 <label class="login-label">Identification</label>
-                <input type="employeeID" class="form-control" id="employeeID" placeholder="Employee Identification" size = "35">
+                <input type="employeeID" class="form-control" id="employeeID" placeholder="Employee Identification" size = "35" required autofocus>
             </div>
             <div class="password-box">
                 <label class="login-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password" size="35">
+                <input type="password" class="form-control" id="password" placeholder="Password" size="35" required>
             </div>
             <div th:if="${param.error}" class="login-label">
                 Invalid username or password.

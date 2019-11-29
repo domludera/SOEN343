@@ -1,25 +1,112 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="https://www.thymeleaf.org" lang="en">
+<html>
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Home</title>
 </head>
 <body>
-<h1>Welcome! <span th:text="${username}"></span>, this is the home page.</h1>
-
-<table id="usersTable">
-    <tr>
-        <td class="username">Jeremy Grapefruit</td>
-        <td class="userrole">Normal User</td>
-    </tr>
-    <tr>
-        <td class="username">Alice Watermelon</td>
-        <td class="userrole">Administrator</td>
-    </tr>
-</table>
-
-<div>
-    <a th:href="@{/logout}">Sign out</a>
+<div id="main">
+    <div class="nav-container">
+        <div class="nav-left">
+            <button class="openbtn" onclick="openNav()">☰</button>
+            <div><img src="Assets/car.svg"></div>
+            <div class="dash-text">Dashboard</div>
+        </div>
+        <div class="nav-right">
+            <div class="garage-text" >GarageBand</div>
+        </div>
+    </div>
 </div>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div class="side-bar-nav">
+        <img onclick="growDiv();" src="Assets/cardot.svg">
+        <a onclick="growDiv();" href="#" class="selected">Job Management</a>
+        <img class="chevron" onclick="growDiv();" src="Assets/downarrow.svg">
+    </div>
+    <div class="job-management_nav" id="grow">
+        <div>
+            <img src="Assets/creating-job.svg">
+            <a href="">Create Job</a>
+        </div>
+        <div class="">
+            <img src="Assets/job-bank.svg">
+            <a onclick="growJobBank();">Job Bank</a>
+            <img onclick="growJobBank();" class="job-bank_chevron" src="Assets/downarrow.svg">
+        </div>
+        <div class="job-management_create-job_taskbank" id="grow_taskbank">
+            <div>
+                <img src="Assets/magnifying.svg">
+                <a href="">Search Job</a>
+            </div>
+        </div>
+        <div>
+            <img src="Assets/checkout.svg">
+            <a href="">Checkout Job</a>
+        </div>
+    </div>
+    <div class="side-bar-nav">
+        <img src="Assets/archived.svg">
+        <a href="#">Archived Jobs</a>
+        <img src="">
+    </div>
+    <div class="side-bar-nav">
+        <img src="Assets/schedule.svg">
+        <a href="#">Schedule</a>
+        <img src="">
+    </div>
+    <div class="side-bar-nav">
+        <img src="Assets/creating-customer.svg">
+        <a href="#">Creating Customer</a>
+        <img src="">
+    </div>
+    <div>
+        <a th:href="@{/logout}">Sign out</a>
+    </div>
+</div>
+
+
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "350px";
+    document.getElementById("main").style.marginLeft = "350px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+
+  function growDiv() {
+      var growDiv = document.querySelector(".job-management_nav");
+      var chevron = document.querySelector(".chevron");
+      if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+        growDiv.style.height = "144px";
+        chevron.classList.add("selected");
+      } else {
+        growDiv.style.height = "0px";
+        chevron.classList.remove("selected");
+      }
+  }
+
+  function growJobBank(){
+      var growDiv = document.querySelector(".job-management_create-job_taskbank");
+      var growDivParent = document.querySelector(".job-management_nav");
+
+      var chevron = document.querySelector(".job-bank_chevron");
+      if(growDiv.style.height == "" || growDiv.style.height == "0px"){
+        growDiv.style.height = "48px";
+        growDivParent.style.height = "198px";
+        chevron.classList.add("selected");
+      } else {
+        growDiv.style.height = "0px";
+        growDivParent.style.height = "144px";
+        chevron.classList.remove("selected");
+      }
+
+  }
+  </script>
+
 </body>
 </html>
