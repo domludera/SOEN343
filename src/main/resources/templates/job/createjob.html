@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <link rel="stylesheet" type="text/css" href="CreateJob.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/createjob.css}">
     <title>Create Job</title>
 </head>
 <body>
@@ -10,7 +10,7 @@
     <div class="nav-container">
         <div class="nav-left">
             <button class="openbtn" onclick="openNav()">☰</button>
-            <div><img src="../Assets/car.svg"></div>
+            <div><img th:src="@{/img/car.svg}"></div>
             <div class="dash-text">Dashboard</div>
         </div>
         <div class="nav-right">
@@ -149,7 +149,7 @@
                     </ul>
                 </div>
             </div>
-            <button type="submit" class="default-button"><img src="../Assets/black-plus.svg"><div class="button-text">Create Job</div></button>
+            <button type="submit" class="default-button"><img th:src="@{/img/black-plus.svg}"><div class="button-text">Create Job</div></button>
         </form>
     </div>
 </div>
@@ -157,45 +157,48 @@
 <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <div class="side-bar-nav">
-        <img onclick="growDiv();" src="../Assets/cardot.svg">
+        <img onclick="growDiv();" th:src="@{/img/cardot.svg}">
         <a onclick="growDiv();" href="#" class="selected">Job Management</a>
-        <img class="chevron" onclick="growDiv();" src="../Assets/downarrow.svg">
+        <img class="chevron" onclick="growDiv();" th:src="@{/img/downarrow.svg}">
     </div>
     <div class="job-management_nav" id="grow">
         <div class="jab-management_nav-selected">
-            <img src="../Assets/creating-job.svg">
+            <img th:src="@{/img/creating-job.svg}">
             <a href="">Create Job</a>
         </div>
         <div class="">
-            <img src="../Assets/job-bank.svg">
+            <img th:src="@{/img/job-bank.svg}">
             <a onclick="growJobBank();">Job Bank</a>
-            <img onclick="growJobBank();" class="job-bank_chevron" src="../Assets/downarrow.svg">
+            <img onclick="growJobBank();" class="job-bank_chevron" th:src="@{/img/downarrow.svg}">
         </div>
         <div class="job-management_create-job_taskbank" id="grow_taskbank">
             <div>
-                <img src="../Assets/magnifying.svg">
+                <img th:src="@{/img/magnifying.svg}">
                 <a href="">Search Job</a>
             </div>
         </div>
         <div>
-            <img src="../Assets/checkout.svg">
+            <img th:src="@{/img/checkout.svg}">
             <a href="">Checkout Job</a>
         </div>
     </div>
     <div class="side-bar-nav">
-        <img src="../Assets/archived.svg">
+        <img th:src="@{/img/archived.svg}">
         <a href="#">Archived Jobs</a>
         <img src="">
     </div>
     <div class="side-bar-nav">
-        <img src="../Assets/schedule.svg">
+        <img th:src="@{/img/schedule.svg}">
         <a href="#">Schedule</a>
         <img src="">
     </div>
     <div class="side-bar-nav">
-        <img src="../Assets/creating-customer.svg">
+        <img th:src="@{/img/creating-customer.svg}">
         <a href="#">Creating Customer</a>
         <img src="">
+    </div>
+    <div>
+        <a th:href="@{/logout}">Sign out</a>
     </div>
 </div>
 

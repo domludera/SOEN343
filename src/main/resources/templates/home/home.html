@@ -33,13 +33,13 @@
         </div>
         <div class="">
             <img th:src="@{/img/job-bank.svg}">
-            <a onclick="growJobBank();">Job Bank</a>
+            <a onclick="growJobBank();" href="#">Job Bank</a>
             <img onclick="growJobBank();" class="job-bank_chevron" th:src="@{/img/downarrow.svg}">
         </div>
         <div class="job-management_create-job_taskbank" id="grow_taskbank">
             <div>
                 <img th:src="@{/img/magnifying.svg}">
-                <a>Search Job</a>
+                <a th:href="@{/home/job/jobbank}">Search Job</a>
             </div>
         </div>
         <div>
