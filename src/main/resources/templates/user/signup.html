@@ -14,8 +14,8 @@
 <div  class= "container">
         <form th:action="@{/signup}" th:object="${user}" method="post" class="login-form">
             <h1>Register</h1>
-            <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
-            <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+            <div class="login-label" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
+            <div class="login-label" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
             <div class="employeeID-box">
                 <label class="login-label"> Username: </label>
                 <input class="form-control" placeholder="Choose a Username..." type="text" name="username" size=35/>
