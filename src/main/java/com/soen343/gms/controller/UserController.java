@@ -126,7 +126,7 @@ public class UserController {
     public ModelAndView jobpage(@PathVariable("id") long id){
         ModelAndView model = new ModelAndView();
         Job job = jobService.getJobById(id);
-        model.setViewName("job/" + id);
+        model.setViewName("job/jobpage");
         model.addObject("job", job);
         return model;
     }
@@ -136,7 +136,7 @@ public class UserController {
         ModelAndView model = new ModelAndView();
         Job job = jobService.getJobById(id);
         List<Task> tasks = job.getTasks();
-        model.setViewName("task/task" + id);
+        model.setViewName("task/task");
         model.addObject("tasks", tasks);
         return model;
     }
