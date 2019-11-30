@@ -1,0 +1,12 @@
+body{
+    position:fixed;
+}
+.display{
+    background-image: url("../img/garage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+}
