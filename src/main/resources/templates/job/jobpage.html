@@ -44,7 +44,7 @@
                         <div class="task-container">
                             <div class="state">
                             <label class="container">
-                                <input type="checkbox" name="task" class="task-checkbox">
+                                <input type="checkbox" class="task-checkbox">
                                 <span class="checkmark" name="task"></span>
                             </label>
                             <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
@@ -62,7 +62,7 @@
                             <div class="task-container">
                                 <div class="state">
                                 <label class="container">
-                                    <input type="checkbox" name="task" class="task-checkbox">
+                                    <input type="checkbox" class="task-checkbox">
                                     <span class="checkmark" name="task"></span>
                                 </label>
                                 <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
@@ -81,6 +81,7 @@
             <br>
             <div class="change-job-status">
                 <button id="manage-task-button" type="submit" class="default-button"><img th:src="@{/img/black-plus.svg}"><div class="button-text">Mark Tasks Complete</div></button>
+                <input type="hidden" name="jobId" value="ENTER JOB IDEA HERE PLEASE">
                 <button name='job-complete-button' id="job-complete-button" type="submit" class="default-button"><img th:src="@{/img/check.svg}"><div class="button-text">Job Complete</div></button>
             </div>
         </form>
@@ -190,7 +191,7 @@
 
   function jobComplete()
   {
-    var task = document.forms['job-form'].elements[ 'task' ];
+    var task = document.querySelectorAll(".task-checkbox");
       for(var i = 0; i<task.length; i++)
       {
         if(task[i].checked===true&&document.getElementById('status').innerText !== "Archived")
