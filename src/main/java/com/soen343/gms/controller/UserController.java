@@ -97,7 +97,7 @@ public class UserController {
         model.setViewName("job/archivedjob");
         return model;
     }
-
+  
     @RequestMapping(value={"/home/job/job1"}, method=RequestMethod.GET)
     public ModelAndView jobpage(){
         ModelAndView model = new ModelAndView();
