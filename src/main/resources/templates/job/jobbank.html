@@ -27,7 +27,12 @@
 						<span><img th:src="@{/img/white-plus.svg}"></span>
 						<span class="job-bank_task">Ragith - Audi 2015 - VIN 89183847</span>
 					</a>
-					<span class="job-bank_task-status in-progress">In Progress</span>
+					<div class="status-div">
+						<span class="status">Status: &nbsp</span>
+						<span class="job-bank_task-status in-progress">In Progress</span>
+						<span> <button type="submit" class="remove-button"><div class="button-text">Previous State</div></button>
+						<span> <button type="submit" class="remove-button"><div class="button-text">Next State</div></button>
+					</div>
 				</li>
 			</ul>
 		</div>

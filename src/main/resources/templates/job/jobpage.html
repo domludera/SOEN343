@@ -42,10 +42,17 @@
                 <ul style="list-style-type:none">
                     <li>
                         <div class="task-container">
+                            <label class="container">
+                                <input type="checkbox" class="task-checkbox" value="Task">
+                                <span class="checkmark"></span>
+                            </label>
                             <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
                             <div>
                                 <span class="status">State:&nbsp</span>
                                 <span class="job-task-status in-progress">In Progress</span>
+                                <span>
+                                    <button type="button" class="remove-button" onclick="removeList(this)"><div class="button-text">Remove Task</div></button>
+                                </span>
                             </div>
                         </div>
                     </li>
@@ -53,7 +60,7 @@
             </div>
             <br>
             <div class="change-job-status">
-                <button id="manage-task-button" type="submit" class="default-button"><img th:src="@{/img/black-plus.svg}"><div class="button-text">Manage Tasks</div></button>
+                <button id="manage-task-button" type="submit" class="default-button"><img th:src="@{/img/black-plus.svg}"><div class="button-text">Mark Tasks COmplete</div></button>
                 <button id="job-complete-button" type="submit" class="default-button"><img th:src="@{/img/check.svg}"><div class="button-text">Job Complete</div></button>
             </div>
         </form>
