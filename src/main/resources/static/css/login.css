@@ -75,6 +75,7 @@ h1{
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 25px;
+    margin-bottom: 20px;
 }
 
 input{
@@ -90,3 +91,38 @@ input{
 .dash-text{
     padding: 5px;
 }
+
+.register-link{
+    color: #6CBBB3;
+    text-decoration: none;
+}
+
+.login-link{
+    color: #6CBBB3;
+    text-decoration: none;
+}
+
+select {
+    text-align: center;
+    background-color: #6CBBB3;
+    color: white;
+    padding: 5px;
+    margin-bottom: 20px;
+    padding-left:20px;
+    width: 175px;
+    border: none;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    border-radius: 25px;
+    color: black;
+  }
+
+  .login-dropdown-div select option {
+    padding: 30px;
+  }
+  .login-dropdown-div{
+      display: flex;
+      flex-direction: column;
+  }

@@ -14,7 +14,7 @@
     <div  class= "container">
         <form  th:action="@{/login}" method="post" class="login-form" >
             <h1>Login</h1>
-            <div th:if="${msg}" th:utext="${msg}"></div>
+            <div class="login-label" th:if="${msg}" th:utext="${msg}"></div>
             <div class="employeeID-box">
                 <label class="login-label">Identification</label>
                 <input type="text" name="username" class="form-control" id="employeeID" placeholder="Employee Identification" size = "35" required autofocus>
@@ -30,7 +30,7 @@
                 You have been logged out.
             </div>
             <button type="submit" class="default-button">Login</button>
-            <div class="login-label"> Don't have an account, make one  <a th:href="@{/signup}">here</a></div>
+            <div class="login-label"> Don't have an account, make one  <a class='register-link' th:href="@{/signup}">here</a></div>
         </form>
     </div>
 </body>
