@@ -225,7 +225,7 @@ input {
 
 #main .content-area .job-bank_container {
 	margin-top: 10px;
-	height: 60vh;
+	height: 60%;
 	background-color: #121212;
 	border: 1px solid grey;
 	border-radius: 3px;
@@ -272,6 +272,10 @@ input {
 #main .content-area .job-bank_container ul li span.job-bank_task-status.finished {
 	color: #6FCF97;
 	opacity: 80%;
+}
+
+#main,html,body,.content-area{
+	height: 100%;;
 }
 
 
