@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,16 +16,14 @@ public class Job {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-
-
     private String description;
     private String mechanic;
 
     @Enumerated(EnumType.STRING)
     private JobState state;
 
-    @OneToMany(mappedBy = "job")
-    private List<Task> tasks;
+    @OneToMany(cascade=CascadeType.ALL)
+    private List<Task> tasks = new ArrayList<Task>();
 
     @Enumerated(EnumType.STRING)
     public JobState getState() {

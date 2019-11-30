@@ -6,7 +6,6 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name="tasks")
 @Getter
 @Setter
 public class Task
@@ -17,10 +16,6 @@ public class Task
 
     String taskDescription;
     boolean isComplete;
-
-    @ManyToOne
-    @JoinColumn(name="JOB_ID")
-    Job job;
 
     @Override
     public String toString() {
