@@ -88,12 +88,10 @@ function openNav() {
   document.getElementById("mySidebar").style.width = "350px";
   document.getElementById("main").style.marginLeft = "350px";
 }
-
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
-
 function growDiv() {
     var growDiv = document.querySelector(".job-management_nav");
     var chevron = document.querySelector(".chevron");
@@ -105,11 +103,9 @@ function growDiv() {
     	chevron.classList.remove("selected");
     }
 }
-
 function growJobBank(){
     var growDiv = document.querySelector(".job-management_create-job_taskbank");
     var growDivParent = document.querySelector(".job-management_nav");
-
     var chevron = document.querySelector(".job-bank_chevron");
     if(growDiv.style.height == "" || growDiv.style.height == "0px"){
     	growDiv.style.height = "96px";
@@ -120,7 +116,6 @@ function growJobBank(){
     	growDivParent.style.height = "144px";
     	chevron.classList.remove("selected");
     }   
-
 }
 </script>
 
