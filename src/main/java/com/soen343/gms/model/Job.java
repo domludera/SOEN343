@@ -20,7 +20,7 @@ public class Job {
     private String description;
     private String mechanic;
 
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private JobState state;
 
     @OneToMany(mappedBy = "job")
