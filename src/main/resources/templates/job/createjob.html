@@ -18,19 +18,19 @@
         </div>
     </div>
     <div  class= "job-container">
-        <form class="login-form">
+        <form class="login-form" method="POST" action="createjob.html">
             <h1 class="title">Create Job</h1>
             <div class="box">
                 <label class="login-label">Customer</label>
-                <input type="name" class="form-control" id="name" placeholder="Name" size = "35">
+                <input name="customer" type="name" class="form-control" id="name" placeholder="Name" size = "35">
             </div>
             <div class="box">
                 <label class="login-label">VIN</label>
-                <input type="VIN" class="form-control" id="VIN" placeholder="VIN" size="35">
+                <input name="vin" type="VIN" class="form-control" id="VIN" placeholder="VIN" size="35">
             </div>
             <div class="box">
                 <label class="login-label">Notes</label>
-                <textarea id="notes" class="form-control" placeholder="" rows="4" style="resize:none; overflow: hidden;"></textarea>
+                <textarea name="notes" id="notes" class="form-control" placeholder="" rows="4" style="resize:none; overflow: hidden;"></textarea>
             </div>
             <div class="box">
                 <label class="login-label">Tasks</label>
@@ -40,7 +40,7 @@
                             <div class="task-container">
                                 <div class="task-bank-check">
                                     <label class="container">
-                                        <input type="checkbox" class="task-checkbox" value="Task">
+                                        <input name="task" type="checkbox" class="task-checkbox" value="Oil Change">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span class="task-bank-task"><h3>Oil Change</h3></span>
@@ -50,7 +50,7 @@
                             <div class="task-container">
                                 <div class="task-bank-check">
                                     <label class="container">
-                                        <input type="checkbox" class="task-checkbox" value="Task">
+                                        <input name="task" type="checkbox" class="task-checkbox" value="Tire Change">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span class="task-bank-task"><h3>Tire Change</h3></span>
@@ -60,7 +60,7 @@
                             <div class="task-container">
                                 <div class="task-bank-check">
                                     <label class="container">
-                                        <input type="checkbox" class="task-checkbox" value="Task">
+                                        <input name="task" type="checkbox" class="task-checkbox" value="Windsheild Repair">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span class="task-bank-task"><h3>Windsheild Repair</h3></span>
@@ -70,7 +70,7 @@
                             <div class="task-container">
                                 <div class="task-bank-check">
                                     <label class="container">
-                                        <input type="checkbox" class="task-checkbox" value="Task">
+                                        <input name="task" type="checkbox" class="task-checkbox" value="Filter Change">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span class="task-bank-task"><h3>Filter Change</h3></span>
@@ -80,7 +80,7 @@
                             <div class="task-container">
                                 <div class="task-bank-check">
                                     <label class="container">
-                                        <input type="checkbox" class="task-checkbox" value="Task">
+                                        <input name="task" type="checkbox" class="task-checkbox" value="Spark Plug Replacement">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span class="task-bank-task"><h3>Spark Plug Replacement</h3></span>
@@ -90,7 +90,7 @@
                             <div class="task-container">
                                 <div class="task-bank-check">
                                     <label class="container">
-                                        <input type="checkbox" class="task-checkbox" value="Task">
+                                        <input name="task" type="checkbox" class="task-checkbox" value="Engine Repair">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span class="task-bank-task"><h3>Engine Repair</h3></span>
@@ -100,7 +100,7 @@
                             <div class="task-container">
                                 <div class="task-bank-check">
                                     <label class="container">
-                                        <input type="checkbox" class="task-checkbox" value="Task">
+                                        <input name="task" type="checkbox" class="task-checkbox" value="Muffler Repair">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span class="task-bank-task"><h3>Muffler Repair</h3></span>
@@ -110,7 +110,7 @@
                             <div class="task-container">
                                 <div class="task-bank-check">
                                     <label class="container">
-                                        <input type="checkbox" class="task-checkbox" value="Task">
+                                        <input name="task" type="checkbox" class="task-checkbox" value="Fuel Cap Tightening">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span class="task-bank-task"><h3>Fuel Cap Tightening</h3></span>
@@ -120,7 +120,7 @@
                             <div class="task-container">
                                 <div class="task-bank-check">
                                     <label class="container">
-                                        <input type="checkbox" class="task-checkbox" value="Task">
+                                        <input name="task" type="checkbox" class="task-checkbox" value="Brake Work">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span class="task-bank-task"><h3>Brake Work</h3></span>
@@ -130,7 +130,7 @@
                             <div class="task-container">
                                 <div class="task-bank-check">
                                     <label class="container">
-                                        <input type="checkbox" class="task-checkbox" value="Task">
+                                        <input name="task" type="checkbox" class="task-checkbox" value="Battery Replacement">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span class="task-bank-task"><h3>Battery Replacement</h3></span>
@@ -140,7 +140,7 @@
                             <div class="task-container">
                                 <div class="task-bank-check">
                                     <label class="container">
-                                        <input type="checkbox" class="task-checkbox" value="Task">
+                                        <input name="task" type="checkbox" class="task-checkbox" value="Ignition Coil Replacement">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span class="task-bank-task"><h3>Ignition Coil Replacement</h3></span>
