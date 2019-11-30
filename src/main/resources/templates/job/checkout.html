@@ -28,7 +28,10 @@
                     <div class="status-div">
                         <span class="status">Status: &nbsp</span>
                         <span class="job-bank_task-status finished">Completed</span>
-                        <span> <button type="submit" class="remove-button"><div class="button-text">Checkout</div></button>
+                        <form method="POST" action="archive">
+                            <input name="jobId" type="hidden" value="ENTER JOB ID HERE FROM THYMELEAF">
+                            <button type="submit" class="remove-button"><div class="button-text">Checkout</div></button>
+                        </form>
                     </div>
                 </li>
             </ul>
