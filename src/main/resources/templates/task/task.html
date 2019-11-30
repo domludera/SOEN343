@@ -29,34 +29,22 @@
                 <ul style="list-style-type:none">
                     <li>
                         <div class="task-container">
-                            <div class="task-bank-check">
-                                <label class="container">
-                                    <input type="checkbox" class="task-checkbox" value="Task">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
-                            </div>
-                            <span>
-                      <button type="button" class="remove-button" onclick="removeList(this)"><div class="button-text">Remove Task</div></button>
-                    </span>
-                    </li>
-                    <li>
-                        <div class="task-container">
-                            <div class="task-bank-check">
-                                <label class="container">
-                                    <input type="checkbox" class="task-checkbox" value="Task">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <span class="task-bank-task"><h3>r - Audi 2015</h3></span>
-                            </div>
-                            <span>
-                        <button type="submit" class="remove-button" onclick="removeList(this)"><div class="button-text">Remove Task</div></button>
-                      </span>
+                        <div class="task-bank-check">
+                            <label class="container">
+                                <input type="checkbox" class="task-checkbox" value="Task">
+                                <span class="checkmark"></span>
+                            </label>
+                            <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
+                        </div>
+                        <span>
+                             <button type="button" class="remove-button" onclick="removeList(this)"><div class="button-text">Remove Task</div></button>
+                        </span>
                     </li>
                 </ul>
             </div>
             <br>
             <div class="change-job-status">
+                <button type="submit" class="default-button"><img th:src="@{/img/black-plus.svg}"><div class="button-text">Complete Task</div></button>
                 <button type="submit" class="default-button"><img th:src="@{/img/black-plus.svg}"><div class="button-text">Add New Task</div></button>
             </div>
         </form>
