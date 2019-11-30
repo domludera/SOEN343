@@ -1,5 +1,8 @@
 package com.soen343.gms.model;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public enum JobState {
     Initial {
         @Override
