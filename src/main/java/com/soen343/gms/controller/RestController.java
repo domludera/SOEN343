@@ -2,6 +2,7 @@ package com.soen343.gms.controller;
 
 
 import com.soen343.gms.model.Job;
+import com.soen343.gms.model.JobState;
 import com.soen343.gms.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -17,7 +18,7 @@ public class RestController {
 
     @RequestMapping(value = "/home/job/create", method= RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void createJob(@RequestBody Job job) {
-        System.out.println(job);
+        job.setState(JobState.Initial);
         jobService.saveJob(job);
     }
 }

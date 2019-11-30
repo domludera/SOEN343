@@ -15,16 +15,21 @@ public class Job {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Enumerated(EnumType.STRING)
-    private JobState state;
+
 
     private String description;
     private String mechanic;
 
+    @Enumerated(EnumType.ORDINAL)
+    private JobState state;
+
     @OneToMany(mappedBy = "job")
     private List<Task> tasks;
 
-    @Override
+    @Enumerated(EnumType.STRING)
+    public JobState getState() {
+        return this.state;
+    }
     public String toString() {
 
         String taskToString ="";
