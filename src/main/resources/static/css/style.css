@@ -229,6 +229,7 @@ input {
 	background-color: #121212;
 	border: 1px solid grey;
 	border-radius: 3px;
+	overflow-y: scroll;
 }
 
 #main .content-area .job-bank_container ul {
@@ -244,6 +245,7 @@ input {
 	margin-top: 5px;
 	width: 99.5%;
 	margin: auto;
+	justify-content: space-between;
 }
 
 #main .content-area .job-bank_container ul li span img {
