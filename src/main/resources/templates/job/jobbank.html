@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/jobbank.css}">
 
 	<title>job bank</title>
 </head>
@@ -18,19 +19,15 @@
 		</div>
 	</div>
 	<div class="content-area">
-		<input class="job-bank_search" placeholder="Search Job Bank" style="background-color: #212121;" type="text" name="">
-		<div class="job-bank_sort">
-			<span>Sort by</span>
-			<img th:src="@{/img/downarrow.svg}">
-		</div>
+		<h1 class="title">Archive Job</h1>
 		<div class="job-bank_container">
 			<ul>
 				<li>
-					<a style="text-decoration:none" th:href="@{/home/job/job1}">
+					<a style="text-decoration:none; display: flex;" th:href="@{/home/job/job1}">
 						<span><img th:src="@{/img/white-plus.svg}"></span>
-						<span class="job-bank_task">Windsheild Repair - Audi 2015</span>
-						<span class="job-bank_task-status in-progress">In Progress</span>
+						<span class="job-bank_task">Ragith - Audi 2015 - VIN 89183847</span>
 					</a>
+					<span class="job-bank_task-status in-progress">In Progress</span>
 				</li>
 			</ul>
 		</div>
