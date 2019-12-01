@@ -44,7 +44,7 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 
 ## Instructions and Warnings
 
-*Warning*: When importing the project into your IDE, import the project as a Maven Project. If you have issues building it, the problem is most likely a IDE configuration issue. Since most originally cloned the project when it was being built using Graddle, your IDE's configuration have been set automatically to use Graddle to build the project.
+*Warning*: When importing the project into your IDE, import the project as a Maven Project. If you have issues building it, the problem is most likely a IDE configuration issue. Since most originally cloned the project when it was being built using Gradle, your IDE's configuration have been set automatically to use Graddle to build the project.
 
 *Warning*: Please Mark Directory as... Test Sources Folder (src/test/java) in your ide if using IntelliJ. There is most likely an equivalent ide setting for eclipse users.
 
@@ -57,5 +57,5 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 
 3. Now right click GarageManagementSystemApplication.java and run it
 
-4. Go to a web browser and type in localhost:8080 (depends on your IDE configuration) and from there you should have access to Garage Band.
+4. Go to a web browser and type in localhost:8080 and from there you should have access to Garage Band.
 
