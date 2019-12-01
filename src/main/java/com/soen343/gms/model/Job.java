@@ -16,8 +16,11 @@ public class Job {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    private long vin;
+
     private String description;
     private String mechanic;
+    private String customer;
 
     @Enumerated(EnumType.STRING)
     private JobState state;

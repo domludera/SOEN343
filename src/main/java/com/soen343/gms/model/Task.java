@@ -17,6 +17,9 @@ public class Task
     String taskDescription;
     boolean isComplete;
 
+    @ManyToOne
+    Job job;
+
     @Override
     public String toString() {
         return "Task{" +
