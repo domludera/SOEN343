@@ -31,6 +31,7 @@ public class JobController {
     public ModelAndView checkout(){
         ModelAndView model = new ModelAndView();
         List<Job> completedJobs = jobService.findJobsByState(JobState.Complete);
+        model.addObject(completedJobs);
         model.setViewName("job/checkout");
         return model;
     }
@@ -96,9 +97,33 @@ public class JobController {
         return model;
     }
 
+    //Must probably be replaced with an update to DB, but not sure how to do that
+    @RequestMapping(value="/home/job/archivejob", method = RequestMethod.POST)
+    @ResponseBody
+    public ModelAndView archiveJob(@RequestParam("vin") long vin){
+        ModelAndView model = new ModelAndView();
+        Job job = jobService.findJobsByVin(vin);
+        job.setState(JobState.Archived);
+        Job updatedJob = jobService.update(job);
+        model.addObject(updatedJob);
+        model.setViewName("/job/archivedjob");
+        return model;
 
+    }
 
+    //Must probably be replaced with an update to DB, but not sure how to do that
+    @RequestMapping(value="/home/job/completejob", method = RequestMethod.POST)
+    @ResponseBody
+    public ModelAndView completeJob(@RequestParam("vin") long vin){
+        ModelAndView model = new ModelAndView();
+        Job job = jobService.findJobsByVin(vin);
+        job.setState(JobState.Complete);
+        Job updatedJob = jobService.update(job);
+        model.addObject(updatedJob);
+        model.setViewName("/job/jobpage");
+        return model;
 
+    }
 
 
 }

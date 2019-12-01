@@ -13,4 +13,5 @@ public interface JobService
     Job findJobById(long id);
     List<Job> findJobsByState(JobState state);
     Job findJobsByVin(long vin);
+    Job update(Job job);
 }

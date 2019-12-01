@@ -33,5 +33,8 @@ public class JobServiceImplementation implements JobService {
     @Override
     public Job findJobsByVin(long vin) { return jobRepository.findJobByVin(vin);}
 
+    @Override
+    public Job update(Job job) { return jobRepository.save(job); }
+
 
 }

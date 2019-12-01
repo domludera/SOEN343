@@ -19,7 +19,7 @@
     </div>
     <div  class= "job-container">
         <!-- This form is submitted to complete a job. It sends the JOB ID -->
-        <form class="login-form" id='job-form' action='jobpage.html' method='post'>
+        <form class="login-form" id='job-form' action='/home/job/completejob' method='POST'>
             <h1 class="title">Job Vin: <span th:text="${job.vin}">vin</span></span></h1>
             <div class="box">
                 <label class="login-label"><h2>Details</h2></label>
@@ -64,7 +64,7 @@
             <br>
             <div class="change-job-status">
                 <!-- INSERT JOB ID FROM THYMELEAF IN THE VALUE FIELD BELOW -->
-                <input type="hidden" name="jobId" value="ENTER JOB ID HERE PLEASE">
+                <input type="hidden" name="vin" th:value="${job.vin}">
                 <button name='job-complete-button' id="job-complete-button" type="submit" class="default-button"><img th:src="@{/img/check.svg}"><div class="button-text">Submit</div></button>
             </div>
         </form>

@@ -22,16 +22,16 @@
         <h1 class="title">Checkout</h1>
         <div class="job-bank_container">
             <ul>
-                <li>
+                <li th:each="job : ${jobs}">
                     <span><img th:src="@{/img/white-plus.svg}"></span>
-                    <span class="job-bank_task">Windsheild Repair - Audi 2015</span>
+                    <span class="job-bank_task" th:text="${job.vin + ' - ' + job.customer}"></span>
                     <div class="status-div">
                         <span class="status">Status: &nbsp</span>
-                        <span class="job-bank_task-status finished">Completed</span>
+                        <span class="job-bank_task-status finished"  th:text="${job.state}">Completed</span>
                         <!-- This form is submitted to put a job into archive -->
-                        <form method="POST" action="/home/job/checkout">
+                        <form method="POST" action="/home/job/archivejob">
                             <!-- ENTER JOB ID FROM THYMLEAF IF VALUE FIELD BELOW -->
-                            <input name="jobId" type="hidden" value="ENTER JOB ID HERE FROM THYMELEAF">
+                            <input name="jobVin" type="hidden" th:value="${job.vin}">
                             <button type="submit" class="remove-button"><div class="button-text">Checkout</div></button>
                         </form>
                     </div>
