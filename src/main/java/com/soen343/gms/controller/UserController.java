@@ -70,39 +70,4 @@ public class UserController {
         return model;
     }
 
-    @RequestMapping(value={"/home/job/createjob"}, method=RequestMethod.GET)
-    public ModelAndView createjob(){
-        ModelAndView model = new ModelAndView();
-        model.setViewName("job/createjob");
-        return model;
-    }
-
-    @RequestMapping(value={"/home/job/checkout"}, method=RequestMethod.GET)
-    public ModelAndView checkout(){
-        ModelAndView model = new ModelAndView();
-        model.setViewName("job/checkout");
-        return model;
-    }
-
-    @RequestMapping(value={"/home/job/jobbank"}, method=RequestMethod.GET)
-    public ModelAndView jobbank(){
-        ModelAndView model = new ModelAndView();
-        model.setViewName("job/jobbank");
-        return model;
-    }
-
-    @RequestMapping(value={"/home/job/archivedjobs"}, method=RequestMethod.GET)
-    public ModelAndView archivedjobs(){
-        ModelAndView model = new ModelAndView();
-        model.setViewName("job/archivedjob");
-        return model;
-    }
-  
-    @RequestMapping(value={"/home/job/job1"}, method=RequestMethod.GET)
-    public ModelAndView jobpage(){
-        ModelAndView model = new ModelAndView();
-        model.setViewName("job/jobpage");
-        return model;
-    }
-
 }
