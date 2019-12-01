@@ -12,4 +12,5 @@ public interface JobService
     List<Job> getAllJobs();
     Job findJobById(long id);
     List<Job> findJobsByState(JobState state);
+    Job findJobsByVin(long vin);
 }

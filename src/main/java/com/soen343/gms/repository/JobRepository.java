@@ -9,6 +9,7 @@ import java.util.List;
 
 public interface JobRepository extends JpaRepository<Job, Long> {
     Job findJobById(long id);
+    Job findJobByVin(long vin);
     List<Job> findAll();
     List<Job> findAllByState(JobState state);
 

@@ -23,7 +23,7 @@
 		<div class="job-bank_container">
 			<ul id="job-list" >
 				<li class="jobId" th:each="job : ${jobs}">
-					<a style="text-decoration:none; display: flex;" th:href="@{/home/job/job1}">
+					<a style="text-decoration:none; display: flex;" th:href="@{/home/job/} + ${job.vin}">
 						<span><img th:src="@{/img/white-plus.svg}"></span>
 						<span class="job-bank_task" th:text="${job.vin  + ' - ' + job.customer}">vin</span>
 					</a>

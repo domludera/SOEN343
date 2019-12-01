@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -52,19 +53,19 @@ public class JobController {
         return model;
     }
 
-    @RequestMapping(value={"/home/job/{id}"}, method=RequestMethod.GET)
-    public ModelAndView jobpage(@PathVariable("id") long id){
+    @RequestMapping(value={"/home/job/{vin}"}, method=RequestMethod.GET)
+    public ModelAndView jobpage(@PathVariable("vin") long vin){
         ModelAndView model = new ModelAndView();
-        Job job = jobService.findJobById(id);
+        Job job = jobService.findJobsByVin(vin);
         model.setViewName("job/jobpage");
         model.addObject("job", job);
         return model;
     }
 
-    @RequestMapping(value={"/home/job/{id}/task"}, method=RequestMethod.GET)
-    public ModelAndView taskpage(@PathVariable("id") long id){
+    @RequestMapping(value={"/home/job/{vin}/task"}, method=RequestMethod.GET)
+    public ModelAndView taskpage(@PathVariable("vin") long vin){
         ModelAndView model = new ModelAndView();
-        Job job = jobService.findJobById(id);
+        Job job = jobService.findJobsByVin(vin);
         List<Task> tasks = job.getTasks();
         model.setViewName("task/task");
         model.addObject("tasks", tasks);
@@ -73,7 +74,7 @@ public class JobController {
 
     @RequestMapping(value = "/home/job/createjob", method= RequestMethod.POST)
     @ResponseBody
-    public ModelAndView createJob(@RequestParam("vin") long vin, @RequestParam("notes") String notes, @RequestParam("customer") String customer ) {
+    public ModelAndView createJob(@RequestParam("vin") long vin, @RequestParam("notes") String notes, @RequestParam("customer") String customer, @RequestParam("task") String[] tasks) {
         ModelAndView model = new ModelAndView();
         Job job = new Job();
         job.setVin(vin);
@@ -81,6 +82,15 @@ public class JobController {
         job.setState(JobState.Initial);
         job.setCustomer(customer);
         job.setMechanic("No Mechanic Assigned");
+
+        ArrayList<Task> taskList = new ArrayList<Task>();
+        for(String taskString: tasks){
+            Task t = new Task();
+            t.setTaskDescription(taskString);
+            taskList.add(t);
+        }
+
+        job.setTasks(taskList);
         jobService.saveJob(job);
         model.setViewName("/job/createjob");
         return model;

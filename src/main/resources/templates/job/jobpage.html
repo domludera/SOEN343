@@ -20,10 +20,10 @@
     <div  class= "job-container">
         <!-- This form is submitted to complete a job. It sends the JOB ID -->
         <form class="login-form" id='job-form' action='jobpage.html' method='post'>
-            <h1 class="title">Job #9800</h1>
+            <h1 class="title">Job Vin: <span th:text="${job.vin}">vin</span></span></h1>
             <div class="box">
                 <label class="login-label"><h2>Details</h2></label>
-                <textarea id="notes" class="form-control" rows="4" readonly style="resize:none; overflow: hidden;">This is a description</textarea>
+                <textarea id="notes" class="form-control" rows="4" readonly style="resize:none; overflow: hidden;" th:text="${job.description}"></textarea>
             </div>
             <div class=job-information-container>
                 <div class="manager-information-container">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="job-state">
                     <h2>State:&nbsp&nbsp</h2>
-                    <h3 id="status" class="job-task-status">In Progress</h3>
+                    <h3 id="status" class="job-task-status"><span th:text="${job.state}">In Progress</span></h3>
                 </div>
             </div>
             <br>
@@ -41,14 +41,14 @@
             </div>
             <div class= "task-bank-container">
                 <ul style="list-style-type:none">
-                    <li>
+                    <li th:each="task : ${job.tasks}">
                         <div class="task-container">
                             <div class="state">
                             <label class="container">
                                 <input type="checkbox" class="task-checkbox">
                                 <span class="checkmark" name="task"></span>
                             </label>
-                            <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
+                                <span class="task-bank-task"><h3><span th:text="${task.taskDescription}"></span></h3></span>
                             </div>
                             <div class="state">
                                 <span class="status">State:&nbsp</span>
@@ -58,24 +58,6 @@
                                 </span>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                            <div class="task-container">
-                                <div class="state">
-                                <label class="container">
-                                    <input type="checkbox" class="task-checkbox">
-                                    <span class="checkmark" name="task"></span>
-                                </label>
-                                <span class="task-bank-task"><h3>Windsheild Repair - Audi 2015</h3></span>
-                                </div>
-                                <div class="state">
-                                    <span class="status">State:&nbsp</span>
-                                    <span class="job-task-status">In Progress</span>
-                                    <span>
-                                        <button type="button" class="remove-button" onclick="removeList(this)"><div class="button-text">Remove Task</div></button>
-                                    </span>
-                                </div>
-                            </div>
                     </li>
                 </ul>
             </div>

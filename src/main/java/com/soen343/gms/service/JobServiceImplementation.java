@@ -30,5 +30,8 @@ public class JobServiceImplementation implements JobService {
 
     public List<Job> findJobsByState(JobState state){ return jobRepository.findAllByState(state);}
 
+    @Override
+    public Job findJobsByVin(long vin) { return jobRepository.findJobByVin(vin);}
+
 
 }
