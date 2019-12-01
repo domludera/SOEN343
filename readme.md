@@ -42,7 +42,7 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 | Dominik Ludera 				    | domludera  	 			|
 | Fintan Davidson         	| finndavidson  		|
 | David Semujanga           |DavSemu        		|
-|            				|     					|
+| Joshua Butler    				  |MrJCipherButtles   |
 |            				|    					|
 |                           |                       |                 
 
