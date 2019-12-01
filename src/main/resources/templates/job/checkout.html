@@ -28,7 +28,9 @@
                     <div class="status-div">
                         <span class="status">Status: &nbsp</span>
                         <span class="job-bank_task-status finished">Completed</span>
+                        <!-- This form is submitted to put a job into archive -->
                         <form method="POST" action="archive">
+                            <!-- ENTER JOB ID FROM THYMLEAF IF VALUE FIELD BELOW -->
                             <input name="jobId" type="hidden" value="ENTER JOB ID HERE FROM THYMELEAF">
                             <button type="submit" class="remove-button"><div class="button-text">Checkout</div></button>
                         </form>
