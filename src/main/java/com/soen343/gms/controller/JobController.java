@@ -82,7 +82,7 @@ public class JobController {
         job.setDescription(notes);
         job.setState(JobState.Initial);
         job.setCustomer(customer);
-        job.setMechanic("No Mechanic Assigned");
+        job.setMechanic("John Doe");
 
         ArrayList<Task> taskList = new ArrayList<Task>();
         for(String taskString: tasks){
