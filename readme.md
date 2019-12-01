@@ -2,23 +2,6 @@
 
 ## Team Somena - Garage Band
 
-**Mark Directory as... Test Sources Folder (src/test/java) in your ide if using IntelliJ.
-There is most likely an equivalent ide setting for eclipse users**
-
-IMPORTANT INSTRUCTIONS (PLEASE READ):
-
-When importing the project into your IDE, import the project as a Maven Project.
-Most popular IDEs have maven integration built-in (I recommend IntelliJ).
-If you have issues building the project, the problem is most likely a IDE configuration issue.
-
-Since most originally cloned the project when the project was being built using Graddle,
-your IDE's configuration have been set automatically to use Graddle to build the project.
-Changing IDE configurations manually is not a trivial task.
-
-**You should re-clone the project as a completely new Maven project to have the IDE automatically build the project with Maven (DO NOT simply git pull!).**
-
-I wish you all an easy build!
-
 ## Objective
 
 Develop a ERP (Enterprise Resource Planning) software called Garage Band to help garages across the world with ressource management
@@ -39,19 +22,40 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 | -------------             | :-------------:       | 
 | Louis-Benjamin Durocher   | LouisBenjamin			|
 | Mina Selim       			| MinaSelim				|
-| Patricia Nunes| Patnunes	|
-| Mike Calixte 							|mcalixte						|
+| Patricia Nunes			| Patnunes				|
+| Mike Calixte 				|mcalixte				|
 | Ragith Sabapathipillai    | r_saba       			|
-| Dominik Ludera 				    | domludera  	 			|
+| Dominik Ludera 			| domludera  			|
 | Fintan Davidson         	| finndavidson  		|
 | David Semujanga           |DavSemu        		|
-| Joshua Butler    				  |MrJCipherButtles   |
-|            				|    					|
-|                           |                       |                 
+| Joshua Butler    			|MrJCipherButtles   	|
+| Carlita L'Abbé			|carlitalabbe			|
+| Menachem Harrison         | conso1e               |                 
 
 
 ## Technologies/Tools
 
 * Java
 * SpringBoot
-* Cloud Database?
+* Thymeleaf
+* Embedded Database
+* H2 Database Management
+
+
+## Instructions and Warnings
+
+*Warning*: When importing the project into your IDE, import the project as a Maven Project. If you have issues building it, the problem is most likely a IDE configuration issue. Since most originally cloned the project when it was being built using Graddle, your IDE's configuration have been set automatically to use Graddle to build the project.
+
+*Warning*: Please Mark Directory as... Test Sources Folder (src/test/java) in your ide if using IntelliJ. There is most likely an equivalent ide setting for eclipse users.
+
+1. Open your IDE (Ideally IntelliJ) and import the repository as a Maven Project. On IntelliJ, you can also press on the "Check out from Version Control" and it will prompt you for the repository URL. This URL can be found under the "Clone or Download" button of the Github page.
+
+2. Once the repository is imported, the left side of the IDE should display the directory of all the files related to GarageBand. From there, the file called GarageManagementSystemApplication.java can be found by following the path:
+
+
+> SOEN343 [garage-management-system] > src > main > java > com.soen343.gms > GarageManagementSystemApplication.java
+
+3. Now right click GarageManagementSystemApplication.java and run it
+
+4. Go to a web browser and type in localhost:8080 (depends on your IDE configuration) and from there you should have access to Garage Band.
+
