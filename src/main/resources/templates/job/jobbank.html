@@ -6,7 +6,7 @@
 
 	<title>job bank</title>
 </head>
-<body>
+<body onload="getStatusButtons()">
 <div id="main">
 	<div class="nav-container">
 		<div class="nav-left">
@@ -29,9 +29,45 @@
 					</a>
 					<div class="status-div">
 						<span class="status">Status: &nbsp</span>
-						<span class="job-bank_task-status ">In Progress</span>
-						<span> <button type="submit" class="remove-button"><div class="button-text">Previous State</div></button>
-						<span> <button type="submit" class="remove-button"><div class="button-text">Next State</div></button>
+						<span name="status_job" class="job-bank_task-status ">On Hold</span>
+						<span> <button name="previous" type="submit" class="remove-button"><div class="button-text">Previous State</div></button>
+						<span> <button name="next" type="submit" class="remove-button"><div class="button-text">Next State</div></button>
+					</div>
+				</li>
+				<li>
+					<a style="text-decoration:none; display: flex;" th:href="@{/home/job/job1}">
+						<span><img th:src="@{/img/white-plus.svg}"></span>
+						<span class="job-bank_task">Ragith - Audi 2015 - VIN 89183847</span>
+					</a>
+					<div class="status-div">
+						<span class="status">Status: &nbsp</span>
+						<span name="status_job" class="job-bank_task-status ">In Progress</span>
+						<span> <button name="previous" type="submit" class="remove-button"><div class="button-text">Previous State</div></button>
+						<span> <button name="next" type="submit" class="remove-button"><div class="button-text">Next State</div></button>
+					</div>
+				</li>
+				<li>
+					<a style="text-decoration:none; display: flex;" th:href="@{/home/job/job1}">
+						<span><img th:src="@{/img/white-plus.svg}"></span>
+						<span class="job-bank_task">Ragith - Audi 2015 - VIN 89183847</span>
+					</a>
+					<div class="status-div">
+						<span class="status">Status: &nbsp</span>
+						<span name="status_job" class="job-bank_task-status ">Complete</span>
+						<span> <button name="previous" type="submit" class="remove-button"><div class="button-text">Previous State</div></button>
+						<span> <button name="next" type="submit" class="remove-button"><div class="button-text">Next State</div></button>
+					</div>
+				</li>
+				<li>
+					<a style="text-decoration:none; display: flex;" th:href="@{/home/job/job1}">
+						<span><img th:src="@{/img/white-plus.svg}"></span>
+						<span class="job-bank_task">Ragith - Audi 2015 - VIN 89183847</span>
+					</a>
+					<div class="status-div">
+						<span class="status">Status: &nbsp</span>
+						<span name="status_job" class="job-bank_task-status ">Archived</span>
+						<span> <button name="previous" type="submit" class="remove-button"><div class="button-text">Previous State</div></button>
+						<span> <button name="next" type="submit" class="remove-button"><div class="button-text">Next State</div></button>
 					</div>
 				</li>
 			</ul>
@@ -122,6 +158,40 @@ function growJobBank(){
     	chevron.classList.remove("selected");
     }   
 }
+
+function getStatusButtons(){
+    console.log(document.getElementsByName('status_job'))
+	console.log(document.getElementsByName('previous'))
+	var status =document.getElementsByName('status_job');
+	for(var i = 0; i<status.length; i++)
+	{
+		if(status[i].textContent=== "Archived")
+    		{
+    		document.getElementsByName("previous")[i].disabled = false;
+    		document.getElementsByName("next")[i].disabled = true;
+    		}
+		if(status[i].textContent === "In Progress")
+    		{
+			document.getElementsByName("previous")[i].disabled = false;
+		    document.getElementsByName("next")[i].disabled = false;
+		    }
+		if(status[i].textContent === "On Hold")
+    		{
+			document.getElementsByName("previous")[i].disabled = true;
+			document.getElementsByName("next")[i].disabled = false;
+		    }
+		if(status[i].textContent === "Complete")
+    		{
+			document.getElementsByName("previous")[i].disabled = false;
+    		document.getElementsByName("next")[i].disabled = true;
+   			 }
+		if(status[i].textContent === "New")
+    		{
+			document.getElementsByName("previous")[i].disabled = true;
+    		document.getElementsByName("next")[i].disabled = false;
+   			 }
+	}
+  }
 </script>
 
 </body>
