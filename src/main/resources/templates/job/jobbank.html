@@ -30,8 +30,12 @@
 					<div class="status-div">
 						<span class="status">Status: &nbsp</span>
 						<span name="status_job" class="job-bank_task-status ">On Hold</span>
-						<span> <button name="previous" type="submit" class="remove-button"><div class="button-text">Previous State</div></button>
-						<span> <button name="next" type="submit" class="remove-button"><div class="button-text">Next State</div></button>
+						<form method="POST" action="updateState">
+							<span> <button name="previous" value="" type="submit" class="remove-button"><div class="button-text">Previous State</div></button>
+						</form>
+						<form method="POST" action="updateState">
+							<span> <button name="next" type="submit" class="remove-button"><div class="button-text">Next State</div></button>
+						</form>
 					</div>
 				</li>
 				<li>
@@ -167,23 +171,29 @@ function displayButton(){
 		if(status[i].textContent === "In Progress")
     		{
 			document.getElementsByName("previous")[i].textContent = "On Hold";
+			document.getElementsByName("previous")[i].value = "On Hold";
 		    }
 		if(status[i].textContent === "On Hold")
     		{
 			document.getElementsByName("next")[i].textContent = "In Progress";
+			document.getElementsByName("next")[i].value = "In Progress";
 		    }
 		if(status[i].textContent === "Pending Approval")
     		{
+			document.getElementsByName("previous")[i].value = "In Progress";
 			document.getElementsByName("previous")[i].textContent = "In Progress";
 			document.getElementsByName("next")[i].textContent= "Complete";
+			document.getElementsByName("next")[i].value = "Complete";
 		    }
 		if(status[i].textContent === "Complete")
     		{
 			document.getElementsByName("previous")[i].textContent= "In Progress";
+			document.getElementsByName("previous")[i].value = "In Progress";
    			 }
 		if(status[i].textContent === "New")
     		{
     		document.getElementsByName("next")[i].textContent="In Progress";
+			document.getElementsByName("next")[i].value = "In Progress";
    			 }
 	}
   }
