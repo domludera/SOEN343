@@ -23,9 +23,12 @@
         <div class="job-bank_container">
             <ul>
                 <li th:each="job: ${jobs}">
-                    <span><img th:src="@{/img/white-plus.svg}"></span>
-                    <span class="job-bank_task" th:text="${job.vin + ' - ' + job.customer}"></span>
+                    <a style="text-decoration:none; display: flex;" th:href="@{/home/job/} + ${job.vin}">
+                        <span><img th:src="@{/img/white-plus.svg}"></span>
+                        <span class="job-bank_task" th:text="${job.vin + ' - ' + job.customer}"></span>
+                    </a>
                     <span class="job-bank_task-status finished">Archived</span>
+
                 </li>
             </ul>
         </div>
