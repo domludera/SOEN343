@@ -2,6 +2,9 @@
 
 ## Team Somena - Garage Band
 
+**Mark Directory as... Test Sources Folder (src/test/java) in your ide if using IntelliJ.
+There is most likely an equivalent ide setting for eclipse users**
+
 IMPORTANT INSTRUCTIONS (PLEASE READ):
 
 When importing the project into your IDE, import the project as a Maven Project.
