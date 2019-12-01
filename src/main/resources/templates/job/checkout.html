@@ -31,7 +31,7 @@
                         <!-- This form is submitted to put a job into archive -->
                         <form method="POST" action="/home/job/archivejob">
                             <!-- ENTER JOB ID FROM THYMLEAF IF VALUE FIELD BELOW -->
-                            <input name="jobVin" type="hidden" th:value="${job.vin}">
+                            <input name="vin" type="hidden" th:value="${job.vin}">
                             <button type="submit" class="remove-button"><div class="button-text">Checkout</div></button>
                         </form>
                     </div>

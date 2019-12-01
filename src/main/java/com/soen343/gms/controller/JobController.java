@@ -30,8 +30,8 @@ public class JobController {
     @RequestMapping(value={"/home/job/checkout"}, method=RequestMethod.GET)
     public ModelAndView checkout(){
         ModelAndView model = new ModelAndView();
-        List<Job> completedJobs = jobService.findJobsByState(JobState.Complete);
-        model.addObject(completedJobs);
+        List<Job> jobs = jobService.findJobsByState(JobState.Complete);
+        model.addObject("jobs", jobs);
         model.setViewName("job/checkout");
         return model;
     }
@@ -48,8 +48,8 @@ public class JobController {
     @RequestMapping(value={"/home/job/archivedjobs"}, method=RequestMethod.GET)
     public ModelAndView archivedjobs(){
         ModelAndView model = new ModelAndView();
-        List<Job> archivedJobs = jobService.findJobsByState(JobState.Archived);
-        model.addObject("archivedJobs", archivedJobs);
+        List<Job> jobs = jobService.findJobsByState(JobState.Archived);
+        model.addObject("jobs", jobs);
         model.setViewName("job/archivedjob");
         return model;
     }
@@ -104,9 +104,9 @@ public class JobController {
         ModelAndView model = new ModelAndView();
         Job job = jobService.findJobsByVin(vin);
         job.setState(JobState.Archived);
-        Job updatedJob = jobService.update(job);
-        model.addObject(updatedJob);
-        model.setViewName("/job/archivedjob");
+        job = jobService.update(job);
+        model.addObject(job);
+        model.setViewName("/job/checkout");
         return model;
 
     }
@@ -118,8 +118,8 @@ public class JobController {
         ModelAndView model = new ModelAndView();
         Job job = jobService.findJobsByVin(vin);
         job.setState(JobState.Complete);
-        Job updatedJob = jobService.update(job);
-        model.addObject(updatedJob);
+        job = jobService.update(job);
+        model.addObject(job);
         model.setViewName("/job/jobpage");
         return model;
 

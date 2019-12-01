@@ -22,9 +22,9 @@
         <h1 class="title">Archive Job</h1>
         <div class="job-bank_container">
             <ul>
-                <li>
+                <li th:each="job: ${jobs}">
                     <span><img th:src="@{/img/white-plus.svg}"></span>
-                    <span class="job-bank_task">Windsheild Repair - Audi 2015</span>
+                    <span class="job-bank_task" th:text="${job.vin + ' - ' + job.customer}"></span>
                     <span class="job-bank_task-status finished">Archived</span>
                 </li>
             </ul>
