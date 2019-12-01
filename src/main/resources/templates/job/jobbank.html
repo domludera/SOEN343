@@ -22,14 +22,14 @@
 		<h1 class="title">Job Bank</h1>
 		<div class="job-bank_container">
 			<ul id="job-list" >
-				<li class="jobId">
+				<li class="jobId" th:each="job : ${jobs}">
 					<a style="text-decoration:none; display: flex;" th:href="@{/home/job/job1}">
 						<span><img th:src="@{/img/white-plus.svg}"></span>
-						<span class="job-bank_task">Ragith - Audi 2015 - VIN 89183847</span>
+						<span class="job-bank_task" th:text="${job.vin  + ' - ' + job.customer}">vin</span>
 					</a>
 					<div class="status-div">
 						<span class="status">Status: &nbsp</span>
-						<span name="status_job" class="job-bank_task-status ">On Hold</span>
+						<span name="status_job" class="job-bank_task-status " th:text="${job.state}">On Hold</span>
 						<span> <button name="previous" type="submit" class="remove-button"><div class="button-text">Previous State</div></button>
 						<span> <button name="next" type="submit" class="remove-button"><div class="button-text">Next State</div></button>
 					</div>
