@@ -26,4 +26,9 @@ public class JobServiceImplementation implements JobService {
 
     @Override
     public Job findJobById(long id) { return jobRepository.findJobById(id); }
+
+    @Override
+    public List<Task> findAllTask() {
+        return null;
+    }
 }
