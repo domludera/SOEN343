@@ -20,6 +20,7 @@ public class Job {
 
     private String description;
     private String mechanic;
+    private String customer;
 
     @Enumerated(EnumType.STRING)
     private JobState state;

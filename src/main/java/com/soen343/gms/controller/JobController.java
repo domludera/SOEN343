@@ -73,12 +73,14 @@ public class JobController {
 
     @RequestMapping(value = "/home/job/createjob", method= RequestMethod.POST)
     @ResponseBody
-    public ModelAndView createJob(@RequestParam("vin") long vin, @RequestParam("notes") String notes) {
+    public ModelAndView createJob(@RequestParam("vin") long vin, @RequestParam("notes") String notes, @RequestParam("customer") String customer ) {
         ModelAndView model = new ModelAndView();
         Job job = new Job();
         job.setVin(vin);
         job.setDescription(notes);
         job.setState(JobState.Initial);
+        job.setCustomer(customer);
+        job.setMechanic("No Mechanic Assigned");
         jobService.saveJob(job);
         model.setViewName("/job/createjob");
         return model;
