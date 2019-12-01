@@ -125,5 +125,19 @@ public class JobController {
 
     }
 
+    @RequestMapping(value="/home/job/inprogress", method = RequestMethod.POST)
+    @ResponseBody
+    public ModelAndView initialToInProgress(@RequestParam("vin") long vin){
+        ModelAndView model = new ModelAndView();
+        Job job = jobService.findJobsByVin(vin);
+        job.setState(JobState.InProgress);
+        job = jobService.update(job);
+        List<Job> jobs = jobService.getAllJobs();
+        model.addObject("jobs", jobs);
+        model.setViewName("/job/jobbank");
+        return model;
+
+    }
+
 
 }
