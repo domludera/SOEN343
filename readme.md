@@ -57,5 +57,5 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 
 3. Now right click GarageManagementSystemApplication.java and run it
 
-4. Go to a web browser and type in localhost:8080 (depends on your IDE configuartion) and from there you should have access to Garage Band.
+4. Go to a web browser and type in localhost:8080 (depends on your IDE configuration) and from there you should have access to Garage Band.
 
