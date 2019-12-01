@@ -25,7 +25,5 @@ public class JobServiceImplementation implements JobService {
     }
 
     @Override
-    public Job getJobById(long id) {
-        return jobRepository.getOne(id);
-    }
+    public Job findJobById(long id) { return jobRepository.findJobById(id); }
 }
