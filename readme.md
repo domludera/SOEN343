@@ -48,7 +48,7 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 
 *Warning*: Please Mark Directory as... Test Sources Folder (src/test/java) in your ide if using IntelliJ. There is most likely an equivalent ide setting for eclipse users.
 
-1. Open your IDE (Ideally ItelliJ) and import the repository as a Maven Project. On IntelliJ, you can also press on the "Check out from Version Control" and it wil prompt you for the repository URL. This URL can be found under the "Clone or Download" button of the Github page.
+1. Open your IDE (Ideally IntelliJ) and import the repository as a Maven Project. On IntelliJ, you can also press on the "Check out from Version Control" and it will prompt you for the repository URL. This URL can be found under the "Clone or Download" button of the Github page.
 
 2. Once the repository is imported, the left side of the IDE should display the directory of all the files related to GarageBand. From there, the file called GarageManagementSystemApplication.java can be found by following the path:
 
