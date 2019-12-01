@@ -31,9 +31,11 @@
 						<span class="status">Status: &nbsp</span>
 						<span name="status_job" class="job-bank_task-status ">On Hold</span>
 						<form method="POST" action="updateState">
+							<input type="hidden" name="jobId" value="ENTER JOBID FROM THYMELEAF HERE">
 							<span> <button name="previous" value="" type="submit" class="remove-button"><div class="button-text">Previous State</div></button>
 						</form>
 						<form method="POST" action="updateState">
+							<input type="hidden" name="jobId" value="ENTER JOBID FROM THYMELEAF HERE">
 							<span> <button name="next" type="submit" class="remove-button"><div class="button-text">Next State</div></button>
 						</form>
 					</div>
