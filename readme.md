@@ -46,7 +46,7 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 
 *Warning*: When importing the project into your IDE, import the project as a Maven Project. If you have issues building it, the problem is most likely a IDE configuration issue. Since most originally cloned the project when it was being built using Graddle, your IDE's configuration have been set automatically to use Graddle to build the project.
 
-Mark Directory as... Test Sources Folder (src/test/java) in your ide if using IntelliJ. There is most likely an equivalent ide setting for eclipse users.
+*Warning*: Please Mark Directory as... Test Sources Folder (src/test/java) in your ide if using IntelliJ. There is most likely an equivalent ide setting for eclipse users.
 
 1. Open your IDE (Ideally ItelliJ) and import the repository as a Maven Project. On IntelliJ, you can also press on the "Check out from Version Control" and it wil prompt you for the repository URL. This URL can be found under the "Clone or Download" button of the Github page.
 
