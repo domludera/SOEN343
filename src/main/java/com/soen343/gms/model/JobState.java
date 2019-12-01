@@ -38,7 +38,7 @@ public enum JobState {
         @Override
         public JobState nextState() { return Archived; }
         @Override
-        public JobState prevState() { return this; }
+        public JobState prevState() { return InProgress; }
         @Override
         public String getCode() { return "C"; }
     },
