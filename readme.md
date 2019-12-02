@@ -44,18 +44,22 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 
 ## Instructions and Warnings
 
-*Warning*: When importing the project into your IDE, import the project as a Maven Project. If you have issues building it, the problem is most likely a IDE configuration issue. Since most originally cloned the project when it was being built using Graddle, your IDE's configuration have been set automatically to use Graddle to build the project.
+*Warning*: This project has been implemented and tested using IntelliJ therefore it is recommended to use IntelliJ
 
-*Warning*: Please Mark Directory as... Test Sources Folder (src/test/java) in your ide if using IntelliJ. There is most likely an equivalent ide setting for eclipse users.
+*Warning*: This is a java project so java must be part of the users environment
 
-1. Open your IDE (Ideally IntelliJ) and import the repository as a Maven Project. On IntelliJ, you can also press on the "Check out from Version Control" and it will prompt you for the repository URL. This URL can be found under the "Clone or Download" button of the Github page.
+*Warning*: Please Mark Directory as... Test Sources Folder (src/test/java).
 
-2. Once the repository is imported, the left side of the IDE should display the directory of all the files related to GarageBand. From there, the file called GarageManagementSystemApplication.java can be found by following the path:
+1. Open your IDE and import the repository as a Maven Project. On IntelliJ, you can also press on the "Check out from Version Control" and it will prompt you for the repository URL. This URL can be found under the "Clone or Download" button of the Github page. Wait until the project has fully downloaded before continuing.
 
+2. Once the repository is imported, the project directory window will display the directory of all the files related to GarageBand, which will most likely be found on the left side of the IDE. From there, the file called GarageManagementSystemApplication.java can be found by following the path:
 
 > SOEN343 [garage-management-system] > src > main > java > com.soen343.gms > GarageManagementSystemApplication.java
 
 3. Now right click GarageManagementSystemApplication.java and run it
 
-4. Go to a web browser and type in localhost:8080 (depends on your IDE configuration) and from there you should have access to Garage Band.
+4. Go to a web browser and type in localhost:8080 and from there you should have access to Garage Band.
+
+
+
 
