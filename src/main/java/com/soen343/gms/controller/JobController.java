@@ -75,10 +75,10 @@ public class JobController {
 
     @RequestMapping(value = "/home/job/createjob", method= RequestMethod.POST)
     @ResponseBody
-    public ModelAndView createJob(@RequestParam("vin") long vin, @RequestParam("notes") String notes, @RequestParam("customer") String customer, @RequestParam("task") String[] tasks) {
+    public ModelAndView createJob(@RequestParam("vin") float vin, @RequestParam("notes") String notes, @RequestParam("customer") String customer, @RequestParam("task") String[] tasks) {
         ModelAndView model = new ModelAndView();
         Job job = new Job();
-        job.setVin(vin);
+        job.setVin((long)vin);
         job.setDescription(notes);
         job.setState(JobState.Initial);
         job.setCustomer(customer);
