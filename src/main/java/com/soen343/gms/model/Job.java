@@ -16,6 +16,7 @@ public class Job {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(unique = true)
     private long vin;
 
     private String description;
