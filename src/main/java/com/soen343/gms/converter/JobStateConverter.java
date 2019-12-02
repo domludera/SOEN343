@@ -7,7 +7,7 @@ import javax.persistence.Converter;
 import java.util.stream.Stream;
 
 @Converter(autoApply = true)
-public class StateConverter implements AttributeConverter<JobState, String> {
+public class JobStateConverter implements AttributeConverter<JobState, String> {
     @Override
     public String convertToDatabaseColumn(JobState state) {
         if(state == null) {

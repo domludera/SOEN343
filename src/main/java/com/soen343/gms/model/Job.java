@@ -22,16 +22,11 @@ public class Job {
     private String mechanic;
     private String customer;
 
-    @Enumerated(EnumType.STRING)
     private JobState state;
 
     @OneToMany(cascade=CascadeType.ALL)
     private List<Task> tasks = new ArrayList<Task>();
 
-    @Enumerated(EnumType.STRING)
-    public JobState getState() {
-        return this.state;
-    }
     public String toString() {
 
         String taskToString ="";
