@@ -54,12 +54,12 @@ Develop a ERP (Enterprise Resource Planning) software called Garage Band to help
 
 2. Once the repository is imported, the project directory window will display the directory of all the files related to GarageBand, which will most likely be found on the left side of the IDE. From there, the file called GarageManagementSystemApplication.java can be found by following the path:
 
-
 > SOEN343 [garage-management-system] > src > main > java > com.soen343.gms > GarageManagementSystemApplication.java
 
 3. Now right click GarageManagementSystemApplication.java and run it
 
 4. Go to a web browser and type in localhost:8080 and from there you should have access to Garage Band.
+
 
 
 
